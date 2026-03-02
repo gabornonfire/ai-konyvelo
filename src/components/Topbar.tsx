@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Menu, X } from "lucide-react";
 
 const navItems = [
   { href: "#vision", label: "Összkép" },
@@ -9,6 +10,7 @@ const navItems = [
 
 const Topbar = () => {
   const [active, setActive] = useState("vision");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,10 +27,19 @@ const Topbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Close menu on resize to desktop
+  useEffect(() => {
+    const onResize = () => { if (window.innerWidth >= 768) setMenuOpen(false); };
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
+  const handleNavClick = () => setMenuOpen(false);
+
   return (
     <header className="sticky top-0 z-50 bg-background/92 backdrop-blur-[10px] border-b border-border">
       <div className="max-w-content mx-auto px-[18px] py-3 flex items-center justify-between gap-4">
-        <div className="flex flex-col gap-0.5 min-w-[220px]">
+        <div className="flex flex-col gap-0.5 min-w-0">
           <strong className="text-sm tracking-wide">
             Minősített mesterséges intelligencia és automatizációs könyvelő szakértő
           </strong>
@@ -37,6 +48,7 @@ const Topbar = () => {
           </span>
         </div>
 
+        {/* Desktop nav */}
         <nav className="hidden md:flex flex-wrap gap-2 justify-end" aria-label="Szekció navigáció">
           {navItems.map((item) => (
             <a
@@ -53,7 +65,36 @@ const Topbar = () => {
             </a>
           ))}
         </nav>
+
+        {/* Mobile hamburger */}
+        <button
+          className="md:hidden p-2 -mr-2 text-foreground"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label={menuOpen ? "Menü bezárása" : "Menü megnyitása"}
+        >
+          {menuOpen ? <X size={22} /> : <Menu size={22} />}
+        </button>
       </div>
+
+      {/* Mobile menu */}
+      {menuOpen && (
+        <nav className="md:hidden border-t border-border bg-background px-[18px] py-3 flex flex-col gap-1" aria-label="Mobil navigáció">
+          {navItems.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              onClick={handleNavClick}
+              className={`no-underline text-sm px-3 py-2.5 rounded-lg transition-all
+                ${active === item.href.slice(1)
+                  ? "text-primary bg-primary/[0.06] font-semibold"
+                  : "text-muted-foreground hover:bg-secondary hover:text-foreground"
+                }`}
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+      )}
     </header>
   );
 };

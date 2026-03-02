@@ -1,12 +1,460 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState, useCallback } from "react";
+import Topbar from "@/components/Topbar";
+import Kicker from "@/components/Kicker";
+import InfoCard from "@/components/InfoCard";
+import Note from "@/components/Note";
+import CheckList from "@/components/CheckList";
+import DayAccordion from "@/components/DayAccordion";
+import Chip from "@/components/Chip";
 
 const Index = () => {
+  const [openDays, setOpenDays] = useState<Record<number, boolean>>({});
+
+  const expandAll = useCallback(() => {
+    const all: Record<number, boolean> = {};
+    for (let i = 1; i <= 11; i++) all[i] = true;
+    setOpenDays(all);
+  }, []);
+
+  const collapseAll = useCallback(() => setOpenDays({}), []);
+
+  const toggleDay = (day: number) =>
+    setOpenDays((prev) => ({ ...prev, [day]: !prev[day] }));
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Topbar />
+
+      {/* Hero */}
+      <section id="vision" className="py-20 px-[5%]">
+        <div className="max-w-content mx-auto">
+          <Kicker text={`Képzés fókusz \u2022 konzervatív, szakmai hang`} />
+          <h1 className="text-[44px] font-bold leading-[1.15] tracking-tight mb-3.5">
+            <span className="text-primary">Minősített</span> mesterséges intelligencia és automatizációs könyvelő szakértő
+          </h1>
+          <p className="text-lg text-muted-foreground max-w-[920px] mt-3.5">
+            Nem eszközlistát adunk, hanem <b>működési mintákat</b>. A résztvevő a képzés végére átlátja,
+            hogyan lehet AI-t bevezetni <b>mérhetően</b>, <b>biztonságosan</b>, <b>dokumentáltan</b> – könyvelői nyelven.
+          </p>
+          <div className="flex flex-wrap gap-2.5 mt-[18px]">
+            <a href="#days" className="inline-flex items-center justify-center rounded-lg px-[18px] py-3 font-semibold text-sm border border-primary/50 text-primary bg-transparent hover:bg-primary/[0.06] transition-all">
+              Ugrás a részletes tematikára ▸
+            </a>
+            <button onClick={expandAll} className="inline-flex items-center justify-center rounded-lg px-[18px] py-3 font-semibold text-sm border border-primary/50 text-primary bg-transparent hover:bg-primary/[0.06] transition-all">
+              Összes kinyitása
+            </button>
+            <button onClick={collapseAll} className="inline-flex items-center justify-center rounded-lg px-[18px] py-3 font-semibold text-sm border border-primary/50 text-primary bg-transparent hover:bg-primary/[0.06] transition-all">
+              Összes bezárása
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Miért fontos most? */}
+      <section id="why-now" className="py-20 px-[5%]">
+        <div className="max-w-content mx-auto grid grid-cols-12 gap-6">
+          <div className="col-span-12">
+            <InfoCard>
+              <h2 className="text-[26px] font-semibold leading-[1.15] tracking-tight">Miért fontos most?</h2>
+              <p className="text-lg text-muted-foreground mt-2.5">
+                A cél nem az, hogy {`\u201EAI-t használjunk\u201D`}, hanem hogy az AI <b>működési infrastruktúra</b> legyen: kontrollált, dokumentált és mérhető.
+              </p>
+              <Note>
+                <CheckList items={[
+                  `2026-tól a könyvelői piac élesen szétválik: rendszerszinten működő irodák vs. manuális túlélők.`,
+                  `Az AI nem \u201Eextra\u201D, hanem működési infrastruktúra kérdés lett.`,
+                  `A jogi és governance elvárások gyorsabban változnak, mint a szakmai gyakorlat.`,
+                  <>Nem az a kérdés, hogy használunk-e AI-t, hanem hogy <b>hogyan</b> és milyen keretek között.</>,
+                ]} />
+              </Note>
+              <Note>
+                <b>Megjegyzés:</b> Ez egy belső draft a képzés pozicionálásához és struktúrájához – nem marketing anyag.
+              </Note>
+            </InfoCard>
+          </div>
+
+          <div className="col-span-12 md:col-span-7">
+            <InfoCard>
+              <h2 className="text-[26px] font-semibold leading-[1.15] tracking-tight">Kinek szól?</h2>
+              <p className="text-lg text-muted-foreground mt-2.5">
+                Azoknak a szakembereknek, akik a napi működésben szeretnének <b>időt nyerni</b>, <b>hibát csökkenteni</b> és <b>biztonságosan skálázni</b> – irodai realitások mentén.
+              </p>
+              <Note>
+                <CheckList items={[
+                  `Könyvelőiroda tulajdonosoknak`,
+                  `Vezető könyvelőknek`,
+                  `Adótanácsadóknak`,
+                  `Olyan szakembereknek, akik működési szinten akarnak AI-t bevezetni`,
+                  `Akik rendszert akarnak építeni, nem trükköket tanulni`,
+                ]} />
+              </Note>
+            </InfoCard>
+          </div>
+
+          <div className="col-span-12 md:col-span-5">
+            <InfoCard>
+              <h2 className="text-[26px] font-semibold leading-[1.15] tracking-tight">Mit nem kérünk tőled?</h2>
+              <p className="text-lg text-muted-foreground mt-2.5">
+                Nem cél, hogy fejlesztő legyél. A cél, hogy legyen egy <b>érthető döntési és működési kereted</b> az AI-hoz.
+              </p>
+              <Note>
+                <CheckList items={[
+                  `Nem kell programozónak lenned`,
+                  `Nem kell technológiai szakértőnek lenned`,
+                  `Nem kell \u201EAI rajongónak\u201D lenned`,
+                  `Nem kell radikálisan átalakítanod az irodádat`,
+                ]} />
+              </Note>
+              <Note><b>Ez nem tech képzés.</b> Ez működési és döntési képzés.</Note>
+            </InfoCard>
+          </div>
+
+          <div className="col-span-12">
+            <InfoCard>
+              <Note>
+                <b>Megjegyzés:</b> A célcsoport kommunikációja szándékosan {`\u201Eirodatulajdonosi nyelven\u201D`} van megfogalmazva, hogy ne riassza el a konzervatívabb szereplőket sem.
+              </Note>
+            </InfoCard>
+          </div>
+
+          <div className="col-span-12">
+            <InfoCard>
+              <h2 className="text-[26px] font-semibold leading-[1.15] tracking-tight">Mit tanít valójában?</h2>
+              <p className="text-lg text-muted-foreground mt-2.5">
+                A program azt tanítja meg, hogyan lesz az AI-ból <b>megbízható munkatárs</b> a folyamatban – úgy, hogy közben megmarad a <b>szakmai kontroll</b>.
+              </p>
+              <Note>
+                <CheckList items={[
+                  `Hogyan gondolkodj AI-val – nem csak hogyan használd.`,
+                  `Hogyan építs validált use case-eket.`,
+                  `Hogyan mérd a hatást (ROI keret).`,
+                  `Hogyan vezesd be governance és compliance mellett.`,
+                  `Hogyan kerüld el a \u201EPoC purgatóriumot\u201D.`,
+                  `Hogyan lesz az AI-ból üzemszerű működés.`,
+                ]} />
+              </Note>
+            </InfoCard>
+          </div>
+        </div>
+      </section>
+
+      {/* Mi különbözteti meg - LILAC gradient section */}
+      <section className="section-lilac py-20 px-[5%]">
+        <div className="max-w-content mx-auto">
+          <InfoCard>
+            <h2 className="text-[26px] font-semibold leading-[1.15] tracking-tight">Mi különbözteti meg más AI képzésektől?</h2>
+            <p className="text-lg text-muted-foreground mt-2.5">
+              Itt a fókusz nem az, hogy {`\u201Emit tud a ChatGPT\u201D`}, hanem az, hogy az AI-ból <b>üzemszerű, ismételhető</b> teljesítmény legyen –
+              <b> méréssel</b>, <b>felelősséggel</b> és <b>megfeleléssel</b>.
+            </p>
+            <Note>
+              <p><b>1) Nem eszközlista.</b> Döntési logikát adunk: mikor elég az egyszerű megoldás, mikor kell kontrolláltabb építkezés.</p>
+              <p className="mt-3"><b>2) Nem prompt-gyűjtemény.</b> Workflow-t tanítunk: kontextus, validáció, dokumentálás – hogy a minőség ne emberfüggő legyen.</p>
+              <p className="mt-3"><b>3) Nem hype.</b> A cél a stabil működés: pilot → mérés → skálázás, {`\u201EPoC purgatórium\u201D`} nélkül.</p>
+              <p className="mt-3"><b>4) Jog + governance + ROI egy rendszerben.</b> Nem külön blokkok, hanem összekapcsolt működési keret.</p>
+              <p className="mt-3"><b>5) Könyvelői környezetre optimalizált.</b> Tipikus iroda-folyamatokra, adatérzékenységre és auditálhatóságra szabva.</p>
+              <p className="mt-3"><b>6) Minősítési logika.</b> A tudásszint visszaigazolása a cél – nem automatikus {`\u201Eoklevél\u201D`}.</p>
+            </Note>
+            <Note>
+              <b>Megjegyzés:</b> A belső egyeztetésben szándékosan {`\u201Ekonzervatív\u201D`} a hangnem – a public landing verziót később finomhangoljuk.
+            </Note>
+          </InfoCard>
+        </div>
+      </section>
+
+      {/* Tematika */}
+      <section id="days" className="py-20 px-[5%] bg-secondary border-t border-b border-border">
+        <div className="max-w-content mx-auto grid grid-cols-12 gap-6">
+          <div className="col-span-12">
+            <InfoCard>
+              <h2 className="text-[26px] font-semibold leading-[1.15] tracking-tight">Részletes tematika – 11 tanítási nap (lenyíló)</h2>
+              <p className="text-lg text-muted-foreground mt-2">
+                Minden nap <b>4×45 perc</b>. A napok a program logikáját követik: gondolkodásmód → workflow → use case → jog/governance → tech minimum → lezárás.
+              </p>
+              <div className="flex flex-wrap gap-2 mt-3">
+                <Chip label="Élő online" />
+                <Chip label="Visszanézhető" />
+                <Chip label="Gyakorlatorientált" />
+                <Chip label="Minősítési vizsga (nem automatikus)" />
+              </div>
+            </InfoCard>
+          </div>
+
+          <div className="col-span-12 space-y-0">
+            <DayAccordion title="1. nap – AI gondolkodásmód és szakmai transzformáció (Felvezető)" isOpen={!!openDays[1]} onToggle={() => toggleDay(1)}>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
+              <p><b>Németh Gábor</b></p>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
+              <CheckList items={[
+                `Az AI-t \u201Ekognitív társ\u201D-ként értelmezni: kiterjesztett gondolkodási tér, nem eszköztrükk.`,
+                `Megérteni, miért válik szét a piac: rendszerszintű működés vs. manuális túlterheltség.`,
+                `Megtanulni a szakmai felelősség és validáció alapmintáit (auditálhatóság könyvelői nyelven).`,
+              ]} />
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Témák</p>
+              <CheckList items={[
+                `AI mint kognitív partner: mikor \u201Esegít\u201D, mikor \u201Ekockázat\u201D.`,
+                `Kontextus, forráskezelés, feltételezések jelölése – szakmai fegyelem.`,
+                `Minőségkapuk: ellenőrzési pontok, másodvélemény, dokumentálás.`,
+                `Használati szabályok: mi kerülhet be, mi nem (adatérzékenység alapok).`,
+              ]} />
+            </DayAccordion>
+
+            <DayAccordion title="2. nap – Advanced kognitív workflow I. (Elemzés & kutatás)" isOpen={!!openDays[2]} onToggle={() => toggleDay(2)}>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
+              <p><b>Németh Gábor</b></p>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
+              <CheckList items={[
+                `Komplex szakmai kérdések elemzése strukturált gondolkodással (nem \u201Epromptolás\u201D).`,
+                `Döntés-előkészítő munkafolyamatok: több nézőpont, ellenőrzési pontok, következtetések.`,
+              ]} />
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Témák</p>
+              <CheckList items={[
+                `Vertikális (mély) elemzés: bontás, részproblémák, hipotézisek.`,
+                `Horizontális perspektívabővítés: alternatív megoldások, kockázati forgatókönyvek.`,
+                `\u201EKérdésfák\u201D és döntési térkép: hogyan lesz a beszélgetésből szakmai struktúra.`,
+                `Validációs keret: mi az, amit mindig vissza kell ellenőrizni.`,
+              ]} />
+            </DayAccordion>
+
+            <DayAccordion title="3. nap – Advanced kognitív workflow II. (Tudásbázis & standardizálás)" isOpen={!!openDays[3]} onToggle={() => toggleDay(3)}>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
+              <p><b>Németh Gábor</b></p>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
+              <CheckList items={[
+                `Ismételhető, tanítható AI-munkaminták kialakítása (nem személyfüggő \u201Etrükkök\u201D).`,
+                `Belső tudásbázis és standard workflow alapjai.`,
+              ]} />
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Témák</p>
+              <CheckList items={[
+                `Tudásbázis gondolkodás: források, verziók, felelősségek.`,
+                `Workflow minták: szerepkörök, lépések, output sablonok.`,
+                `Modell- és megoldásválasztás: mikor elég egyszerű, mikor kell kontrolláltabb megoldás.`,
+                `Use case-ek előkészítése: milyen adat kell, milyen kockázat van, mi a mérőszám.`,
+              ]} />
+            </DayAccordion>
+
+            <DayAccordion title="4. nap – Eszközválasztás & AI ökoszisztéma (döntési logika, nem eszközlista)" isOpen={!!openDays[4]} onToggle={() => toggleDay(4)}>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
+              <p><b>Tiszavölgyi Péter</b></p>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
+              <CheckList items={[
+                `Világos döntési logikát adni: mikor elég egyszerű megoldás, mikor kell komolyabb építkezés.`,
+                `Ökoszisztéma-szemlélet: felhasználói, workflow, adat, modell, governance szint.`,
+              ]} />
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Témák</p>
+              <CheckList items={[
+                `Miért nem működik az \u201Eeszközlista\u201D gondolkodás.`,
+                `Low-code/no-code és agentic működés: mikor hasznos, mikor kockázatos.`,
+                `Döntési fa: feladat, adatérzékenység, kontroll, skála.`,
+                `Könyvelőirodai minták: hol tud gyorsan értéket adni, hol nem.`,
+              ]} />
+            </DayAccordion>
+
+            <DayAccordion title={`5. nap – Low-code / No-code alapok (mini-automatizációk, PoC \u2192 MVP)`} isOpen={!!openDays[5]} onToggle={() => toggleDay(5)}>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
+              <p><b>Keresni kell ide még</b> (javasolt: Koltai Balázs)</p>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
+              <CheckList items={[
+                `Megmutatni, hogyan lehet fejlesztői tudás nélkül \u201Ekicsi, de hasznos\u201D automatizációkat építeni.`,
+                `Nem \u201Eprogramozás\u201D: vizuális eszközök, összekötések, kontrollpontok.`,
+              ]} />
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Témák</p>
+              <CheckList items={[
+                `Mit érdemes automatizálni könyvelőirodában (biztonságos scope-ok).`,
+                `Adatáramlás: input → feldolgozás → output; hol kell emberi ellenőrzés.`,
+                `Minőségkapuk és hibakezelés: hogyan ne \u201Ecsússzon el\u201D a rendszer.`,
+                `Dokumentálás: mi az a minimum, amitől auditálható marad.`,
+              ]} />
+            </DayAccordion>
+
+            <DayAccordion title="6. nap – Marketing & AI Office (irodai kommunikáció, gyorsabb outputok)" isOpen={!!openDays[6]} onToggle={() => toggleDay(6)}>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
+              <p><b>Pásti Edina</b></p>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
+              <CheckList items={[
+                `AI a mindennapi irodai működésben: gyors, minőségi kommunikáció és anyagkészítés.`,
+                `Marketing alapok könyvelőirodáknak: egyszerű, mérhető, nem \u201Ereels-hype\u201D.`,
+              ]} />
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Témák</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5 mt-3">
+                <div>
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold">Marketing</p>
+                  <CheckList items={[
+                    `Piackutatás, versenytárselemzés, pozicionálás.`,
+                    `Tartalomstratégia: mit kommunikáljunk, milyen ritmusban.`,
+                    `Onepager, ajánlat, vizuális anyagok – gyors prototípusok.`,
+                  ]} />
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold">AI Office</p>
+                  <CheckList items={[
+                    `Ügyfélszolgálati kérdések kezelése, e-mail válaszok gyorsítása.`,
+                    `Prezentációkészítés, vizualizáció, dokumentumok.`,
+                    `Minőség + stílus: hogyan lesz következetes az iroda hangja.`,
+                  ]} />
+                </div>
+              </div>
+            </DayAccordion>
+
+            <DayAccordion title="7. nap – Use case discovery & validáció (Top 3 döntésre érett use case)" isOpen={!!openDays[7]} onToggle={() => toggleDay(7)}>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
+              <p><b>Laczkó Gábor</b></p>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
+              <CheckList items={[
+                `\u201EJó ötletből\u201D döntésre érett use case: üzleti érték + megvalósíthatóság.`,
+                `Top 3 use case kiválasztása portfólió-szinten.`,
+              ]} />
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Témák</p>
+              <CheckList items={[
+                `Use case gyűjtés és tisztázás: mi számít valódi üzleti problémának.`,
+                `SIPOC-alapú keretezés: folyamat, érintettek, hatókör.`,
+                `7 pontos validáció: érték, mérőszám, ROI, komplexitás, megoldási logika.`,
+                `Prioritás és döntés: Top 3 use case rögzítése.`,
+              ]} />
+            </DayAccordion>
+
+            <DayAccordion title="8. nap – Jogi szabályozás (EU keretrendszer) + Governance (működő rendszer)" isOpen={!!openDays[8]} onToggle={() => toggleDay(8)}>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktatók</p>
+              <CheckList items={[
+                <>
+                  <b>Jogi szabályozás (4 óra):</b> Dr. Menyhárd Attila
+                </>,
+                <>
+                  <b>Governance, security, megfelelés (4 óra):</b> Dr. Firniksz Judit, Dr. Nagy István
+                </>,
+              ]} />
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Jogi szabályozás – fókusz</p>
+              <CheckList items={[
+                `AI Act, GDPR, Data Act, DSA, DMA és kapcsolódó adatjogi keretek.`,
+                `Értelmezési kérdések, kötelezettségek, felelősségek.`,
+              ]} />
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Governance – gyakorlati fókusz</p>
+              <CheckList items={[
+                `Hogyan építs ki működő AI governance rendszert a cégen belül?`,
+                `Jog–IT–biztonság–adatvédelem együttműködés.`,
+                `Hogyan kerüld el a \u201EPoC purgatóriumot\u201D (pilot → mérés → skálázás)?`,
+                `Data governance + AI governance + információbiztonság összekötése.`,
+              ]} />
+            </DayAccordion>
+
+            <DayAccordion title="9. nap – E-közigazgatás (2 óra) + Blockchain alapok (2 óra)" isOpen={!!openDays[9]} onToggle={() => toggleDay(9)}>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktatók</p>
+              <CheckList items={[
+                <>
+                  <b>E-közigazgatás (2 óra):</b> Dr. Kovács Ferenc (DÁP, EUDIAS 2.0, bizalmi szolgáltatások)
+                </>,
+                <>
+                  <b>Blockchain alapok (2 óra):</b> Marosvögyi Zsolt
+                </>,
+              ]} />
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">E-közigazgatás – témák</p>
+              <CheckList items={[
+                `DÁP, EUDIAS 2.0: gyakorlati értelmezés könyvelői környezetben.`,
+                `Bizalmi szolgáltatások, digitális hitelesség alapok.`,
+              ]} />
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Blockchain alapok – témák</p>
+              <CheckList items={[
+                `Fogalmak: blockchain, blokkok, tranzakciók, wallet.`,
+                `Mit kell a könyvelőnek értenie ahhoz, hogy az ügyfelet \u201Eértse\u201D.`,
+                `Gyakori tévhitek és kockázatok (egyszerűen, szakmai nyelven).`,
+              ]} />
+            </DayAccordion>
+
+            <DayAccordion title="10. nap – Modern technológiák & pénzügyi innováció (2 óra) + Szoftver automatizáció & kiber (2 óra)" isOpen={!!openDays[10]} onToggle={() => toggleDay(10)}>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktatók</p>
+              <CheckList items={[
+                <>
+                  <b>Modern technológiák (2 óra):</b> Keresni kell ide még
+                </>,
+                <>
+                  <b>Könyvelői szoftver automatizáció és kiber (2 óra):</b> Keresni kell ide még
+                </>,
+              ]} />
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">V. blokk – Modern technológiák és pénzügyi innováció</p>
+              <CheckList items={[
+                `Blockchain alapok (kiterjesztés), tokenek, intelligens szerződések.`,
+                `Kriptovaluták könyvelése – alap logikák, tipikus esetek.`,
+                `Digitális eszközök pénzügyi hatása: mit jelent a beszámoló és kockázat szempontból.`,
+              ]} />
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">VI. blokk – Könyvelői szoftver automatizáció és kiberbiztonság</p>
+              <CheckList items={[
+                `Könyvelő szoftverek automatizációs lehetőségei (pl. Cashbook és egyéb rendszerek).`,
+                `Adatbiztonság, hozzáféréskezelés, alap kiberhigiénia.`,
+                `\u201EMinimum standard\u201D: mi az, amit egy iroda már holnap rendbe tud rakni.`,
+              ]} />
+            </DayAccordion>
+
+            <DayAccordion title="11. nap – ROI, skálázás és lezárás (90 napos akcióterv)" isOpen={!!openDays[11]} onToggle={() => toggleDay(11)}>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
+              <p><b>Keresni kell ide még</b> (javasolt: Laczkó Gábor vagy Németh Gábor)</p>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
+              <CheckList items={[
+                `Összerakni a teljes képet: mérés, ROI, skálázás, változáskezelés.`,
+                <>A résztvevő egy konkrét <b>90 napos tervvel</b> és <b>vezetői összefoglalóval</b> zár.</>,
+              ]} />
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Témák</p>
+              <CheckList items={[
+                `ROI-keret: működési és üzleti hatások mérése (nem csak pénzügy).`,
+                `Mikor és hogyan skálázunk use case-t: döntési kapuk és kontrollpontok.`,
+                `Stratégia + governance + kultúra: hogyan lesz \u201Eüzemszerű\u201D a változás.`,
+                `Vezetői döntéselőkészítő anyag: támogatás megszerzése, jóváhagyás.`,
+              ]} />
+            </DayAccordion>
+
+            <Note>
+              <b>Megjegyzés:</b> ahol {`\u201EKeresni kell ide még\u201D`} szerepel, oda vagy javasolt szakértőt írunk be, vagy közösen választunk oktatót.
+            </Note>
+          </div>
+        </div>
+      </section>
+
+      {/* Eredmények */}
+      <section id="outcomes" className="py-20 px-[5%]">
+        <div className="max-w-content mx-auto">
+          <InfoCard>
+            <h2 className="text-[26px] font-semibold leading-[1.15] tracking-tight">Mit kap kézzelfoghatóan a résztvevő?</h2>
+            <CheckList items={[
+              <><b>Top 3 validált use case</b> (érték + kockázat + megvalósíthatóság vázlat)</>,
+              <><b>ROI keret</b> (mérőszámok, döntési kapuk, prioritás logika)</>,
+              <><b>Governance alapváz</b> (hozzáférés, adatkezelés, audit nyomvonal – minimum szint)</>,
+              <><b>90 napos akcióterv</b> (pilot → mérés → skálázás)</>,
+              <><b>Standard workflow minták</b> (dokumentálható működéshez)</>,
+            ]} />
+          </InfoCard>
+        </div>
+      </section>
+
+      {/* Next step */}
+      <section id="cta" className="section-purple py-20 px-[5%]">
+        <div className="max-w-content mx-auto">
+          <InfoCard glass>
+            <h2 className="text-[26px] font-semibold leading-[1.15] tracking-tight text-white">Next step</h2>
+            <p className="mt-3.5 font-semibold text-white">
+              Ha a célod nem az, hogy {`\u201EAI-t használj\u201D`}, hanem az, hogy AI-val működj – stabilan, mérhetően, megfeleléssel – akkor ez a program jó irány.
+            </p>
+            <Note purple>
+              <b>Döntés:</b> jóváhagyjuk-e a 11 napos struktúrát és a {`\u201Erendszerszintű\u201D`} pozicionálást?<br /><br />
+              <b>Következő lépés:</b> oktatói napok és témák rögzítése, minősítési logika véglegesítése.<br /><br />
+              <b>Output:</b> public landing + programfüzet + vizsga/értékelési keret.
+            </Note>
+            <p className="text-white/80 text-lg mt-2.5">
+              Ha a képzés logikája és a napok bontása rendben, a következő körben <b>naponkénti 4×45 perces</b> belső óratervet (blokkonként) is le tudjuk rakni,
+              és véglegesíthetjük a {`\u201EKeresni kell\u201D`} oktatókat.
+            </p>
+            <div className="flex flex-wrap gap-2.5 mt-[18px]">
+              <button onClick={() => window.print()} className="inline-flex items-center justify-center rounded-lg px-[18px] py-3 font-semibold text-sm bg-transparent text-white border border-white/40 hover:bg-white/10 transition-all">
+                Nyomtatás / PDF
+              </button>
+            </div>
+          </InfoCard>
+        </div>
+      </section>
+
+      <footer className="py-10 px-[5%] border-t border-border text-muted-foreground text-[13px]">
+        <div className="max-w-content mx-auto">
+          <b>Megjegyzés:</b> Ez a dokumentum a képzés tematikájának egyeztetésére készült.
+        </div>
+      </footer>
     </div>
   );
 };

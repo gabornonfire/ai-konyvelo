@@ -444,22 +444,22 @@ const Index = () => {
       {/* Next step */}
       <section id="cta" className="section-purple py-20 px-[5%]">
         <div className="max-w-content mx-auto">
-          <InfoCard glass>
-            <h2 className="text-[26px] font-semibold leading-[1.15] tracking-tight text-white">Next step</h2>
-            <p className="mt-3.5 font-semibold text-white">
+          <InfoCard>
+            <h2 className="text-[26px] font-semibold leading-[1.15] tracking-tight">Next step</h2>
+            <p className="mt-3.5 font-semibold text-foreground">
               Ha a célod nem az, hogy {`\u201EAI-t használj\u201D`}, hanem az, hogy AI-val működj – stabilan, mérhetően, megfeleléssel – akkor ez a program jó irány.
             </p>
-            <Note purple>
+            <Note>
               <b>Döntés:</b> jóváhagyjuk-e a 11 napos struktúrát és a {`\u201Erendszerszintű\u201D`} pozicionálást?<br /><br />
               <b>Következő lépés:</b> oktatói napok és témák rögzítése, minősítési logika véglegesítése.<br /><br />
               <b>Output:</b> public landing + programfüzet + vizsga/értékelési keret.
             </Note>
-            <p className="text-white/80 text-lg mt-2.5">
+            <p className="text-muted-foreground text-lg mt-2.5">
               Ha a képzés logikája és a napok bontása rendben, a következő körben <b>naponkénti 4×45 perces</b> belső óratervet (blokkonként) is le tudjuk rakni,
               és véglegesíthetjük a {`\u201EKeresni kell\u201D`} oktatókat.
             </p>
             <div className="flex flex-wrap gap-2.5 mt-[18px]">
-              <button onClick={() => window.print()} className="inline-flex items-center justify-center rounded-lg px-[18px] py-3 font-semibold text-sm bg-transparent text-white border border-white/40 hover:bg-white/10 transition-all">
+              <button onClick={() => window.print()} className="inline-flex items-center justify-center rounded-lg px-[18px] py-3 font-semibold text-sm border border-primary/50 text-primary bg-transparent hover:bg-primary/[0.06] transition-all">
                 Nyomtatás / PDF
               </button>
             </div>

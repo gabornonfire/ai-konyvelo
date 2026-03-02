@@ -6,6 +6,7 @@ import Note from "@/components/Note";
 import CheckList from "@/components/CheckList";
 import DayAccordion from "@/components/DayAccordion";
 import Chip from "@/components/Chip";
+import { Award, Users, Play, MessageCircleQuestion, Target, Scale } from "lucide-react";
 
 const Index = () => {
   const [openDays, setOpenDays] = useState<Record<number, boolean>>({});
@@ -138,27 +139,43 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Mi különbözteti meg - LILAC gradient section */}
-      <section className="section-lilac py-20 px-[5%]">
+      {/* Mi különbözteti meg - Purple gradient section */}
+      <section className="section-purple py-20 px-[5%]">
         <div className="max-w-content mx-auto">
-          <InfoCard>
-            <h2 className="text-[26px] font-semibold leading-[1.15] tracking-tight">Mi különbözteti meg más AI képzésektől?</h2>
-            <p className="text-lg text-muted-foreground mt-2.5">
-              Itt a fókusz nem az, hogy {`\u201Emit tud a ChatGPT\u201D`}, hanem az, hogy az AI-ból <b>üzemszerű, ismételhető</b> teljesítmény legyen –
-              <b> méréssel</b>, <b>felelősséggel</b> és <b>megfeleléssel</b>.
-            </p>
-            <Note>
-              <p><b>1) Nem eszközlista.</b> Döntési logikát adunk: mikor elég az egyszerű megoldás, mikor kell kontrolláltabb építkezés.</p>
-              <p className="mt-3"><b>2) Nem prompt-gyűjtemény.</b> Workflow-t tanítunk: kontextus, validáció, dokumentálás – hogy a minőség ne emberfüggő legyen.</p>
-              <p className="mt-3"><b>3) Nem hype.</b> A cél a stabil működés: pilot → mérés → skálázás, {`\u201EPoC purgatórium\u201D`} nélkül.</p>
-              <p className="mt-3"><b>4) Jog + governance + ROI egy rendszerben.</b> Nem külön blokkok, hanem összekapcsolt működési keret.</p>
-              <p className="mt-3"><b>5) Könyvelői környezetre optimalizált.</b> Tipikus iroda-folyamatokra, adatérzékenységre és auditálhatóságra szabva.</p>
-              <p className="mt-3"><b>6) Minősítési logika.</b> A tudásszint visszaigazolása a cél – nem automatikus {`\u201Eoklevél\u201D`}.</p>
-            </Note>
-            <Note>
-              <b>Megjegyzés:</b> A belső egyeztetésben szándékosan {`\u201Ekonzervatív\u201D`} a hangnem – a public landing verziót később finomhangoljuk.
-            </Note>
-          </InfoCard>
+          <h2 className="text-[32px] font-bold leading-[1.15] tracking-tight text-white mb-2">
+            Mi különbözteti meg más AI <span className="text-white/70">képzésektől</span>?
+          </h2>
+          <p className="text-lg text-white/80 max-w-[920px] mb-10">
+            Itt a fókusz nem az, hogy {`\u201Emit tud a ChatGPT\u201D`}, hanem az, hogy az AI-ból <b>üzemszerű, ismételhető</b> teljesítmény legyen –
+            <b> méréssel</b>, <b>felelősséggel</b> és <b>megfeleléssel</b>.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="rounded-lg border border-white/20 bg-white/10 backdrop-blur-sm p-7">
+              <Target className="text-white/80 mb-4" size={32} />
+              <h3 className="text-white text-lg font-bold mb-2 normal-case tracking-normal">Nem eszközlista</h3>
+              <p className="text-white/80 text-sm">Döntési logikát adunk: mikor elég az egyszerű megoldás, mikor kell kontrolláltabb építkezés.</p>
+            </div>
+            <div className="rounded-lg border border-white/20 bg-white/10 backdrop-blur-sm p-7">
+              <Play className="text-white/80 mb-4" size={32} />
+              <h3 className="text-white text-lg font-bold mb-2 normal-case tracking-normal">Nem prompt-gyűjtemény</h3>
+              <p className="text-white/80 text-sm">Workflow-t tanítunk: kontextus, validáció, dokumentálás – hogy a minőség ne emberfüggő legyen.</p>
+            </div>
+            <div className="rounded-lg border border-white/20 bg-white/10 backdrop-blur-sm p-7">
+              <Scale className="text-white/80 mb-4" size={32} />
+              <h3 className="text-white text-lg font-bold mb-2 normal-case tracking-normal">Jog + governance + ROI</h3>
+              <p className="text-white/80 text-sm">Nem külön blokkok, hanem összekapcsolt működési keret. Stabil működés: pilot → mérés → skálázás.</p>
+            </div>
+            <div className="rounded-lg border border-white/20 bg-white/10 backdrop-blur-sm p-7">
+              <Award className="text-white/80 mb-4" size={32} />
+              <h3 className="text-white text-lg font-bold mb-2 normal-case tracking-normal">Minősítési logika</h3>
+              <p className="text-white/80 text-sm">A tudásszint visszaigazolása a cél – nem automatikus {`\u201Eoklevél\u201D`}. Könyvelői környezetre optimalizált.</p>
+            </div>
+          </div>
+
+          <Note purple>
+            <b>Megjegyzés:</b> A belső egyeztetésben szándékosan {`\u201Ekonzervatív\u201D`} a hangnem – a public landing verziót később finomhangoljuk.
+          </Note>
         </div>
       </section>
 

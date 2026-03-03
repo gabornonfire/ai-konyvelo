@@ -252,7 +252,7 @@ const Index = () => {
 
             <DayAccordion title="4. nap – Eszközválasztás & AI ökoszisztéma (döntési logika, nem eszközlista)" isOpen={!!openDays[4]} onToggle={() => toggleDay(4)}>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
-              <p><b>Tiszavölgyi Péter</b></p>
+              <p><b>Tiszavölgyi Péter, Laczkó Gábor</b> (Stylers)</p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
               <CheckList items={[
                 `Világos döntési logikát adni: mikor elég egyszerű megoldás, mikor kell komolyabb építkezés.`,
@@ -269,7 +269,7 @@ const Index = () => {
 
             <DayAccordion title={`5. nap – Low-code / No-code alapok (mini-automatizációk, PoC \u2192 MVP)`} isOpen={!!openDays[5]} onToggle={() => toggleDay(5)}>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
-              <p><b>Keresni kell ide még</b> (javasolt: Koltai Balázs)</p>
+              <p><b>Tiszavölgyi Péter</b> (Stylers)</p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
               <CheckList items={[
                 `Megmutatni, hogyan lehet fejlesztői tudás nélkül \u201Ekicsi, de hasznos\u201D automatizációkat építeni.`,
@@ -315,7 +315,7 @@ const Index = () => {
 
             <DayAccordion title="7. nap – Use case discovery & validáció (Top 3 döntésre érett use case)" isOpen={!!openDays[7]} onToggle={() => toggleDay(7)}>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
-              <p><b>Laczkó Gábor</b></p>
+              <p><b>Laczkó Gábor</b> (Stylers)</p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
               <CheckList items={[
                 `\u201EJó ötletből\u201D döntésre érett use case: üzleti érték + megvalósíthatóság.`,
@@ -403,7 +403,7 @@ const Index = () => {
 
             <DayAccordion title="11. nap – ROI, skálázás és lezárás (90 napos akcióterv)" isOpen={!!openDays[11]} onToggle={() => toggleDay(11)}>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
-              <p><b>Keresni kell ide még</b> (javasolt: Laczkó Gábor vagy Németh Gábor)</p>
+              <p><b>Koltai Balázs</b></p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
               <CheckList items={[
                 `Összerakni a teljes képet: mérés, ROI, skálázás, változáskezelés.`,

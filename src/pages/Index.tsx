@@ -352,27 +352,20 @@ const Index = () => {
               ]} />
             </DayAccordion>
 
-            <DayAccordion title="10. nap – Modern technológiák & pénzügyi innováció (2 óra) + Szoftver automatizáció & kiber (2 óra)" isOpen={!!openDays[10]} onToggle={() => toggleDay(10)}>
-              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktatók</p>
+            <DayAccordion title="10. nap – Blockchain, DÁP & digitális eszközök (3×45 perc)" isOpen={!!openDays[10]} onToggle={() => toggleDay(10)}>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
+              <p><b>Keresni kell ide még</b></p>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
               <CheckList items={[
-                <>
-                  <b>Modern technológiák (2 óra):</b> Keresni kell ide még
-                </>,
-                <>
-                  <b>Könyvelői szoftver automatizáció és kiber (2 óra):</b> Keresni kell ide még
-                </>,
+                `Blockchain technológia és a Digitális Állampolgári Portál (DÁP) megértése könyvelői szemszögből.`,
+                `Digitális eszközök pénzügyi és könyvelési hatásainak feltérképezése.`,
               ]} />
-              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">V. blokk – Modern technológiák és pénzügyi innováció</p>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Témák</p>
               <CheckList items={[
-                `Blockchain alapok (kiterjesztés), tokenek, intelligens szerződések.`,
+                `Blockchain alapok: tokenek, intelligens szerződések, decentralizált rendszerek.`,
                 `Kriptovaluták könyvelése – alap logikák, tipikus esetek.`,
-                `Digitális eszközök pénzügyi hatása: mit jelent a beszámoló és kockázat szempontból.`,
-              ]} />
-              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">VI. blokk – Könyvelői szoftver automatizáció és kiberbiztonság</p>
-              <CheckList items={[
-                `Könyvelő szoftverek automatizációs lehetőségei (pl. Cashbook és egyéb rendszerek).`,
-                `Adatbiztonság, hozzáféréskezelés, alap kiberhigiénia.`,
-                `\u201EMinimum standard\u201D: mi az, amit egy iroda már holnap rendbe tud rakni.`,
+                `Digitális Állampolgári Portál (DÁP): funkciók, adatkapcsolatok, könyvelői relevanciák.`,
+                `Digitális eszközök pénzügyi hatása: beszámoló és kockázat szempontból.`,
               ]} />
             </DayAccordion>
 

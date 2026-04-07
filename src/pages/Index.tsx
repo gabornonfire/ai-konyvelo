@@ -26,127 +26,69 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Topbar />
 
-      {/* Hero */}
+      {/* 1. Hero */}
       <section id="vision" className="py-20 px-[5%]">
         <div className="max-w-content mx-auto">
-          <Kicker text={`Képzés fókusz \u2022 konzervatív, szakmai hang`} />
+          <Kicker text="11 napos akkreditált képzés • könyvelőiroda-tulajdonosoknak és vezető könyvelőknek" />
           <h1 className="text-[44px] font-bold leading-[1.15] tracking-tight mb-3.5">
-            <span className="text-primary">Minősített</span> mesterséges intelligencia és automatizációs könyvelő szakértő
+            <span className="text-primary">Minősített</span> AI és automatizációs szakértő – könyvelői szakirány
           </h1>
           <p className="text-lg text-muted-foreground max-w-[920px] mt-3.5">
-            Nem eszközlistát adunk, hanem <b>működési mintákat</b>. A résztvevő a képzés végére átlátja,
-            hogyan lehet AI-t bevezetni <b>mérhetően</b>, <b>biztonságosan</b>, <b>dokumentáltan</b> – könyvelői nyelven.
+            Nem eszközlistát adunk, hanem <b>működési rendszert</b>. A képzés végére átlátod,
+            hogyan vezesd be az AI-t <b>mérhetően</b>, <b>biztonságosan</b>, <b>dokumentáltan</b> — a saját irodád nyelvén.
           </p>
           <div className="flex flex-wrap gap-2.5 mt-[18px]">
             <a href="#days" className="inline-flex items-center justify-center rounded-lg px-[18px] py-3 font-semibold text-sm border border-primary/50 text-primary bg-transparent hover:bg-primary/[0.06] transition-all">
-              Ugrás a részletes tematikára ▸
+              Nézd meg a 11 napos tematikát ▸
             </a>
-            <button onClick={expandAll} className="inline-flex items-center justify-center rounded-lg px-[18px] py-3 font-semibold text-sm border border-primary/50 text-primary bg-transparent hover:bg-primary/[0.06] transition-all">
-              Összes kinyitása
-            </button>
-            <button onClick={collapseAll} className="inline-flex items-center justify-center rounded-lg px-[18px] py-3 font-semibold text-sm border border-primary/50 text-primary bg-transparent hover:bg-primary/[0.06] transition-all">
-              Összes bezárása
-            </button>
           </div>
         </div>
       </section>
 
-      {/* Miért fontos most? */}
-      <section id="why-now" className="py-20 px-[5%]">
-        <div className="max-w-content mx-auto grid grid-cols-12 gap-6">
-          <div className="col-span-12">
-            <InfoCard>
-              <h2 className="text-[26px] font-semibold leading-[1.15] tracking-tight">Miért fontos most?</h2>
-              <p className="text-lg text-muted-foreground mt-2.5">
-                A cél nem az, hogy {`\u201EAI-t használjunk\u201D`}, hanem hogy az AI <b>működési infrastruktúra</b> legyen: kontrollált, dokumentált és mérhető.
-              </p>
-              <Note>
+      {/* 2. Kinek szól? */}
+      <section id="who" className="py-20 px-[5%]">
+        <div className="max-w-content mx-auto">
+          <InfoCard>
+            <h2 className="text-[26px] font-semibold leading-[1.15] tracking-tight">Kinek szól?</h2>
+            <p className="text-lg text-muted-foreground mt-2.5">
+              Azoknak a könyvelőknek és irodatulajdonosoknak, akik érzik, hogy változás jön — és inkább az élére állnának, minthogy utolérje őket.
+            </p>
+            <div className="grid grid-cols-12 gap-6 mt-4">
+              <div className="col-span-12 md:col-span-7">
                 <CheckList items={[
-                  `2026-tól a könyvelői piac élesen szétválik: rendszerszinten működő irodák vs. manuális túlélők.`,
-                  `Az AI nem \u201Eextra\u201D, hanem működési infrastruktúra kérdés lett.`,
-                  `A jogi és governance elvárások gyorsabban változnak, mint a szakmai gyakorlat.`,
-                  <>Nem az a kérdés, hogy használunk-e AI-t, hanem hogy <b>hogyan</b> és milyen keretek között.</>,
+                  `Könyvelőiroda-tulajdonosoknak, akik rendszert akarnak építeni`,
+                  `Vezető könyvelőknek, akik időt akarnak nyerni a napi működésben`,
+                  `Adótanácsadóknak, akik szakmai előnyt akarnak az AI-korszakban`,
+                  `Akik működési szinten akarnak AI-t bevezetni, nem trükköket tanulni`,
                 ]} />
-              </Note>
-              <Note>
-                <b>Megjegyzés:</b> Ez egy belső draft a képzés pozicionálásához és struktúrájához – nem marketing anyag.
-              </Note>
-            </InfoCard>
-          </div>
-
-          <div className="col-span-12 md:col-span-7">
-            <InfoCard>
-              <h2 className="text-[26px] font-semibold leading-[1.15] tracking-tight">Kinek szól?</h2>
-              <p className="text-lg text-muted-foreground mt-2.5">
-                Azoknak a szakembereknek, akik a napi működésben szeretnének <b>időt nyerni</b>, <b>hibát csökkenteni</b> és <b>biztonságosan skálázni</b> – irodai realitások mentén.
-              </p>
-              <Note>
-                <CheckList items={[
-                  `Könyvelőiroda tulajdonosoknak`,
-                  `Vezető könyvelőknek`,
-                  `Adótanácsadóknak`,
-                  `Olyan szakembereknek, akik működési szinten akarnak AI-t bevezetni`,
-                  `Akik rendszert akarnak építeni, nem trükköket tanulni`,
-                ]} />
-              </Note>
-            </InfoCard>
-          </div>
-
-          <div className="col-span-12 md:col-span-5">
-            <InfoCard>
-              <h2 className="text-[26px] font-semibold leading-[1.15] tracking-tight">Mit nem kérünk tőled?</h2>
-              <p className="text-lg text-muted-foreground mt-2.5">
-                Nem cél, hogy fejlesztő legyél. A cél, hogy legyen egy <b>érthető döntési és működési kereted</b> az AI-hoz.
-              </p>
-              <Note>
+              </div>
+              <div className="col-span-12 md:col-span-5">
+                <h2 className="text-[26px] font-semibold leading-[1.15] tracking-tight">Előképzettség nélkül is működik</h2>
+                <p className="text-lg text-muted-foreground mt-2.5">
+                  Nem kell tech-guruvá válnod. A cél, hogy legyen egy <b>világos döntési és működési kereted</b> az AI-hoz — a saját szakmai nyelvedben.
+                </p>
                 <CheckList items={[
                   `Nem kell programozónak lenned`,
                   `Nem kell technológiai szakértőnek lenned`,
-                  `Nem kell \u201EAI rajongónak\u201D lenned`,
+                  `Nem kell „AI rajongónak" lenned`,
                   `Nem kell radikálisan átalakítanod az irodádat`,
                 ]} />
-              </Note>
-              <Note><b>Ez nem tech képzés.</b> Ez működési és döntési képzés.</Note>
-            </InfoCard>
-          </div>
-
-          <div className="col-span-12">
-            <InfoCard>
-              <Note>
-                <b>Megjegyzés:</b> A célcsoport kommunikációja szándékosan {`\u201Eirodatulajdonosi nyelven\u201D`} van megfogalmazva, hogy ne riassza el a konzervatívabb szereplőket sem.
-              </Note>
-            </InfoCard>
-          </div>
-
-          <div className="col-span-12">
-            <InfoCard>
-              <h2 className="text-[26px] font-semibold leading-[1.15] tracking-tight">Mit tanít valójában?</h2>
-              <p className="text-lg text-muted-foreground mt-2.5">
-                A program azt tanítja meg, hogyan lesz az AI-ból <b>megbízható munkatárs</b> a folyamatban – úgy, hogy közben megmarad a <b>szakmai kontroll</b>.
-              </p>
-              <Note>
-                <CheckList items={[
-                  `Hogyan gondolkodj AI-val – nem csak hogyan használd.`,
-                  `Hogyan építs validált use case-eket.`,
-                  `Hogyan mérd a hatást (ROI keret).`,
-                  `Hogyan vezesd be governance és compliance mellett.`,
-                  `Hogyan kerüld el a \u201EPoC purgatóriumot\u201D.`,
-                  `Hogyan lesz az AI-ból üzemszerű működés.`,
-                ]} />
-              </Note>
-            </InfoCard>
-          </div>
+                <Note><b>Ez nem tech képzés.</b> Ez működési és döntési képzés.</Note>
+              </div>
+            </div>
+          </InfoCard>
         </div>
       </section>
 
-      {/* Mi különbözteti meg - Purple gradient section */}
+      {/* 3. Mi különbözteti meg - Purple gradient section */}
       <section className="section-purple py-20 px-[5%]">
         <div className="max-w-content mx-auto">
           <h2 className="text-[32px] font-bold leading-[1.15] tracking-tight text-white mb-2">
             Mi különbözteti meg más AI <span className="text-white/70">képzésektől</span>?
           </h2>
           <p className="text-lg text-white/80 max-w-[920px] mb-10">
-            Itt a fókusz nem az, hogy {`\u201Emit tud a ChatGPT\u201D`}, hanem az, hogy az AI-ból <b>üzemszerű, ismételhető</b> teljesítmény legyen –
+            A könyvelői piac 2026-ban élesen kettéválik: azokra, akik rendszerszinten használják az AI-t, és azokra, akik manuálisan próbálják túlélni.
+            Itt a fókusz nem az, hogy {`\u201Emit tud a ChatGPT\u201D`}, hanem az, hogy az AI-ból <b>üzemszerű, ismételhető</b> teljesítmény legyen —
             <b> méréssel</b>, <b>felelősséggel</b> és <b>megfeleléssel</b>.
           </p>
 
@@ -173,26 +115,45 @@ const Index = () => {
             </div>
           </div>
 
-          <Note purple>
-            <b>Megjegyzés:</b> A belső egyeztetésben szándékosan {`\u201Ekonzervatív\u201D`} a hangnem – a public landing verziót később finomhangoljuk.
-          </Note>
+          <div className="mt-10">
+            <h3 className="text-white text-xl font-bold mb-3">Mit tanít valójában?</h3>
+            <p className="text-white/80 text-lg mb-4">
+              A program azt tanítja meg, hogyan lesz az AI-ból <b>rendszerszintű működési képesség</b> az irodádban — nem egyszeri trükk, hanem a mindennapi munka új alapja.
+            </p>
+            <CheckList purple items={[
+              `Hogyan gondolkodj AI-val egy kitágított kognitív térben — nem csak hogyan „használd".`,
+              `Hogyan építs validált use case-eket a saját irodád folyamataira.`,
+              `Hogyan mérd a hatást: ROI-keret, ami működési és üzleti szempontból is megállja a helyét.`,
+              `Hogyan vezesd be governance és megfelelés mellett — az AI Act-tól a belső szabályokig.`,
+              `Hogyan válj citizen developerré: építs saját workflow-kat és automatizációkat fejlesztői tudás nélkül.`,
+              `Hogyan lesz az AI-ból üzemszerű működés — pilot, mérés, skálázás logikában.`,
+            ]} />
+          </div>
         </div>
       </section>
 
-      {/* Tematika */}
+      {/* 4. Tematika */}
       <section id="days" className="py-20 px-[5%] bg-secondary border-t border-b border-border">
         <div className="max-w-content mx-auto grid grid-cols-12 gap-6">
           <div className="col-span-12">
             <InfoCard>
               <h2 className="text-[26px] font-semibold leading-[1.15] tracking-tight">Részletes tematika – 11 tanítási nap (lenyíló)</h2>
               <p className="text-lg text-muted-foreground mt-2">
-                Minden nap <b>4×45 perc</b>. A napok a program logikáját követik: gondolkodásmód → workflow → use case → jog/governance → tech minimum → lezárás.
+                Minden nap <b>3×45 perc</b>. A napok a program logikáját követik: gondolkodásmód → workflow → use case → jog/governance → tech minimum → lezárás.
               </p>
               <div className="flex flex-wrap gap-2 mt-3">
                 <Chip label="Élő online" />
                 <Chip label="Visszanézhető" />
                 <Chip label="Gyakorlatorientált" />
                 <Chip label="Minősítési vizsga (nem automatikus)" />
+              </div>
+              <div className="flex flex-wrap gap-2.5 mt-4">
+                <button onClick={expandAll} className="inline-flex items-center justify-center rounded-lg px-[18px] py-3 font-semibold text-sm border border-primary/50 text-primary bg-transparent hover:bg-primary/[0.06] transition-all">
+                  Összes kinyitása
+                </button>
+                <button onClick={collapseAll} className="inline-flex items-center justify-center rounded-lg px-[18px] py-3 font-semibold text-sm border border-primary/50 text-primary bg-transparent hover:bg-primary/[0.06] transition-all">
+                  Összes bezárása
+                </button>
               </div>
             </InfoCard>
           </div>
@@ -449,15 +410,11 @@ const Index = () => {
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett óraszám</p>
               <p className="mt-1 text-sm">3×45 perc</p>
             </DayAccordion>
-
-            <Note>
-              <b>Megjegyzés:</b> ahol {`\u201EKeresni kell ide még\u201D`} szerepel, oda vagy javasolt szakértőt írunk be, vagy közösen választunk oktatót.
-            </Note>
           </div>
         </div>
       </section>
 
-      {/* Eredmények */}
+      {/* 5. Eredmények */}
       <section id="outcomes" className="py-20 px-[5%]">
         <div className="max-w-content mx-auto">
           <InfoCard>
@@ -473,35 +430,25 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Next step */}
+      {/* 6. Next step / CTA */}
       <section id="cta" className="section-purple py-20 px-[5%]">
-        <div className="max-w-content mx-auto">
-          <InfoCard>
-            <h2 className="text-[26px] font-semibold leading-[1.15] tracking-tight">Next step</h2>
-            <p className="mt-3.5 font-semibold text-foreground">
-              Ha a célod nem az, hogy {`\u201EAI-t használj\u201D`}, hanem az, hogy AI-val működj – stabilan, mérhetően, megfeleléssel – akkor ez a program jó irány.
-            </p>
-            <Note>
-              <b>Döntés:</b> jóváhagyjuk-e a 11 napos struktúrát és a {`\u201Erendszerszintű\u201D`} pozicionálást?<br /><br />
-              <b>Következő lépés:</b> oktatói napok és témák rögzítése, minősítési logika véglegesítése.<br /><br />
-              <b>Output:</b> public landing + programfüzet + vizsga/értékelési keret.
-            </Note>
-            <p className="text-muted-foreground text-lg mt-2.5">
-              Ha a képzés logikája és a napok bontása rendben, a következő körben <b>naponkénti 4×45 perces</b> belső óratervet (blokkonként) is le tudjuk rakni,
-              és véglegesíthetjük a {`\u201EKeresni kell\u201D`} oktatókat.
-            </p>
-            <div className="flex flex-wrap gap-2.5 mt-[18px]">
-              <button onClick={() => window.print()} className="inline-flex items-center justify-center rounded-lg px-[18px] py-3 font-semibold text-sm border border-primary/50 text-primary bg-transparent hover:bg-primary/[0.06] transition-all">
-                Nyomtatás / PDF
-              </button>
-            </div>
-          </InfoCard>
+        <div className="max-w-content mx-auto text-center">
+          <h2 className="text-[32px] font-bold leading-[1.15] tracking-tight text-white mb-4">Következő lépés</h2>
+          <p className="text-lg text-white/90 font-semibold max-w-[800px] mx-auto">
+            Ha a célod nem az, hogy {`\u201EAI-t használj\u201D`}, hanem az, hogy AI-val működj — stabilan, mérhetően, megfeleléssel — akkor ez a program neked szól.
+          </p>
+          <div className="mt-6">
+            <a href="#" className="inline-flex items-center justify-center rounded-lg px-7 py-3.5 font-semibold text-sm bg-white text-primary hover:bg-white/90 transition-all">
+              Érdeklődöm a képzés iránt ▸
+            </a>
+          </div>
         </div>
       </section>
 
+      {/* 7. Footer */}
       <footer className="py-10 px-[5%] border-t border-border text-muted-foreground text-[13px]">
-        <div className="max-w-content mx-auto">
-          <b>Megjegyzés:</b> Ez a dokumentum a képzés tematikájának egyeztetésére készült.
+        <div className="max-w-content mx-auto text-center">
+          © 2026 Penta Unió Zrt. • Minden jog fenntartva
         </div>
       </footer>
     </div>

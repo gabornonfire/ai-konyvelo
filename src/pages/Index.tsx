@@ -198,7 +198,7 @@ const Index = () => {
           </div>
 
           <div className="col-span-12 space-y-0">
-            <DayAccordion title="1. nap (3×45 perc) – Belépés az AI korszakba – szemléletváltás, működési alapok és az AI mint kognitív partner" isOpen={!!openDays[1]} onToggle={() => toggleDay(1)}>
+            <DayAccordion title="1. nap – Belépés az AI korszakba – szemléletváltás, működési alapok és az AI mint kognitív partner" isOpen={!!openDays[1]} onToggle={() => toggleDay(1)}>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
               <p><b>Németh Gábor</b></p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
@@ -216,9 +216,11 @@ const Index = () => {
                 "AI-jártasság: a különbséget nem a gép, hanem a felhasználó tudása jelenti",
                 "Gyakorlati demonstrációk – hogyan változik meg a munka az AI-jal, élőben",
               ]} />
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett óraszám</p>
+              <p className="mt-1 text-sm">3×45 perc</p>
             </DayAccordion>
 
-            <DayAccordion title="2. nap (3×45 perc) – Advanced AI kognitív workflow I. – elemzés, kutatás és döntés-előkészítés egy kitágított kognitív térben" isOpen={!!openDays[2]} onToggle={() => toggleDay(2)}>
+            <DayAccordion title="2. nap – Advanced AI kognitív workflow I. – elemzés, kutatás és döntés-előkészítés egy kitágított kognitív térben" isOpen={!!openDays[2]} onToggle={() => toggleDay(2)}>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
               <p><b>Németh Gábor</b></p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
@@ -236,9 +238,11 @@ const Index = () => {
                 `Könyvelési folyamatokat támogató use case-ek – a kognitív workflow a gyakorlatban`,
                 `Nyelvi modellek használata a workflow-ban – mikor melyik modellt, mire és miért`,
               ]} />
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett óraszám</p>
+              <p className="mt-1 text-sm">3×45 perc</p>
             </DayAccordion>
 
-            <DayAccordion title="3. nap (3×45 perc) – Advanced AI kognitív workflow II. – tudásbázis, rendszerépítés és vezetői szintű kimenetek" isOpen={!!openDays[3]} onToggle={() => toggleDay(3)}>
+            <DayAccordion title="3. nap – Advanced AI kognitív workflow II. – tudásbázis, rendszerépítés és vezetői szintű kimenetek" isOpen={!!openDays[3]} onToggle={() => toggleDay(3)}>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
               <p><b>Németh Gábor</b></p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
@@ -256,9 +260,11 @@ const Index = () => {
                 `Vezetői szintű kimenetek készítése – stratégiai jegyzet és döntés-előkészítő brief AI-jal`,
                 `A citizen developer útja a gyakorlatban – amikor a könyvelő maga épít megoldást`,
               ]} />
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett óraszám</p>
+              <p className="mt-1 text-sm">3×45 perc</p>
             </DayAccordion>
 
-            <DayAccordion title="4. nap (3×45 perc) – Use case discovery és validáció – hogyan lesz jó ötletből mérhető eredmény a könyvelőirodában" isOpen={!!openDays[4]} onToggle={() => toggleDay(4)}>
+            <DayAccordion title="4. nap – Use case discovery és validáció – hogyan lesz jó ötletből mérhető eredmény a könyvelőirodában" isOpen={!!openDays[4]} onToggle={() => toggleDay(4)}>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
               <p><b>Laczkó Gábor</b> (Stylers)</p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
@@ -276,9 +282,11 @@ const Index = () => {
                 `A PoC purgatórium elkerülése – hogyan ne ragadj le a tesztelésnél`,
                 `Use case portfólió szemlélet – hogyan gondolkodj rendszerben, ne egyedi megoldásokban`,
               ]} />
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett óraszám</p>
+              <p className="mt-1 text-sm">3×45 perc</p>
             </DayAccordion>
 
-            <DayAccordion title="5. nap (3×45 perc) – Eszközválasztás és AI ökoszisztéma – döntési logika, nem eszközlista" isOpen={!!openDays[5]} onToggle={() => toggleDay(5)}>
+            <DayAccordion title="5. nap – Eszközválasztás és AI ökoszisztéma – döntési logika, nem eszközlista" isOpen={!!openDays[5]} onToggle={() => toggleDay(5)}>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
               <p><b>Tiszavölgyi Péter</b> (Stylers)</p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
@@ -296,9 +304,11 @@ const Index = () => {
                 `Eszközök a kognitív workflow-ban – hogyan illeszkednek az egyes eszközök a rendszerbe`,
                 `Skálázhatóság szemlélet – hogyan válassz ma úgy, hogy holnap is működjön`,
               ]} />
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett óraszám</p>
+              <p className="mt-1 text-sm">3×45 perc</p>
             </DayAccordion>
 
-            <DayAccordion title="6. nap (3×45 perc) – Low-code / No-code alapok – amikor a könyvelő maga épít automatizációt" isOpen={!!openDays[6]} onToggle={() => toggleDay(6)}>
+            <DayAccordion title="6. nap – Low-code / No-code alapok – amikor a könyvelő maga épít automatizációt" isOpen={!!openDays[6]} onToggle={() => toggleDay(6)}>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
               <p><b>Vajky Gergő</b></p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
@@ -316,9 +326,11 @@ const Index = () => {
                 `Kontrollpontok beépítése – mikor és hol kell emberi jóváhagyás a folyamatban`,
                 `Az első saját automatizáció – gyakorlati feladat az alkalmon belül`,
               ]} />
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett óraszám</p>
+              <p className="mt-1 text-sm">3×45 perc</p>
             </DayAccordion>
 
-            <DayAccordion title="7. nap (3×45 perc) – Szakértői márka és digitális jelenlét – hogyan találjanak rád az ügyfelek az AI-korszakban" isOpen={!!openDays[7]} onToggle={() => toggleDay(7)}>
+            <DayAccordion title="7. nap – Szakértői márka és digitális jelenlét – hogyan találjanak rád az ügyfelek az AI-korszakban" isOpen={!!openDays[7]} onToggle={() => toggleDay(7)}>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
               <p><b>Pásti Edina</b></p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
@@ -336,9 +348,11 @@ const Index = () => {
                 `Tartalomstratégia: hol kommunikálj és miért – döntési logika, amit az AI tesz kivitelezhetővé`,
                 `Tartalomgyártás AI-jal – saját szakterületi tartalmak gyorsan, hitelesen, saját tartalomgyártó AI asszisztens építése`,
               ]} />
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett óraszám</p>
+              <p className="mt-1 text-sm">3×45 perc</p>
             </DayAccordion>
 
-            <DayAccordion title="8. nap (3×45 perc) – AI a könyvelőiroda mindennapjaiban – gyorsabb kommunikáció, okosabb folyamatok, kevesebb admin" isOpen={!!openDays[8]} onToggle={() => toggleDay(8)}>
+            <DayAccordion title="8. nap – AI a könyvelőiroda mindennapjaiban – gyorsabb kommunikáció, okosabb folyamatok, kevesebb admin" isOpen={!!openDays[8]} onToggle={() => toggleDay(8)}>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
               <p><b>Pásti Edina</b></p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
@@ -354,9 +368,11 @@ const Index = () => {
                 `Az iroda hangja – következetes kommunikáció és stílus, AI-jal skálázva`,
                 `Saját dashboard összeállítása AI-jal – napi feladatlista, projektek haladása, átlátható kontroll`,
               ]} />
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett óraszám</p>
+              <p className="mt-1 text-sm">3×45 perc</p>
             </DayAccordion>
 
-            <DayAccordion title="9. nap (3×45 perc) – AI governance, adatvédelem és megfelelés – működő biztonsági keret, nem papírgyártás" isOpen={!!openDays[9]} onToggle={() => toggleDay(9)}>
+            <DayAccordion title="9. nap – AI governance, adatvédelem és megfelelés – működő biztonsági keret, nem papírgyártás" isOpen={!!openDays[9]} onToggle={() => toggleDay(9)}>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
               <p><b>Dr. Firniksz Judit</b></p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
@@ -374,9 +390,11 @@ const Index = () => {
                 `A PoC purgatórium governance oldala – hogyan ne álljon le az innováció a szabályozás miatt`,
                 `Belső szabályrendszer kialakítása – a minimum, amivel biztonságosan elindulhatsz`,
               ]} />
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett óraszám</p>
+              <p className="mt-1 text-sm">3×45 perc</p>
             </DayAccordion>
 
-            <DayAccordion title="10. nap (3×45 perc) – Blockchain, DÁP & digitális eszközök" isOpen={!!openDays[10]} onToggle={() => toggleDay(10)}>
+            <DayAccordion title="10. nap – Blockchain, DÁP & digitális eszközök" isOpen={!!openDays[10]} onToggle={() => toggleDay(10)}>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
               <p><b>Keresni kell ide még</b></p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
@@ -391,9 +409,11 @@ const Index = () => {
                 `Digitális Állampolgári Portál (DÁP): funkciók, adatkapcsolatok, könyvelői relevanciák.`,
                 `Digitális eszközök pénzügyi hatása: beszámoló és kockázat szempontból.`,
               ]} />
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett óraszám</p>
+              <p className="mt-1 text-sm">3×45 perc</p>
             </DayAccordion>
 
-            <DayAccordion title="11. nap (3×45 perc) – ROI, skálázás és lezárás (90 napos akcióterv)" isOpen={!!openDays[11]} onToggle={() => toggleDay(11)}>
+            <DayAccordion title="11. nap – ROI, skálázás és lezárás (90 napos akcióterv)" isOpen={!!openDays[11]} onToggle={() => toggleDay(11)}>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
               <p><b>Koltai Balázs</b></p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
@@ -408,6 +428,8 @@ const Index = () => {
                 `Stratégia + governance + kultúra: hogyan lesz \u201Eüzemszerű\u201D a változás.`,
                 `Vezetői döntéselőkészítő anyag: támogatás megszerzése, jóváhagyás.`,
               ]} />
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett óraszám</p>
+              <p className="mt-1 text-sm">3×45 perc</p>
             </DayAccordion>
 
             <Note>

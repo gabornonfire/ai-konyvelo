@@ -209,7 +209,7 @@ const Index = () => {
               <CheckList items={[
                 "A paradigmaváltás, ami már zajlik – miért nem opció a kivárás a könyvelői szakmában",
                 "Az agentikus AI-korszak küszöbén – amikor az AI már nem csak válaszol, hanem végrehajt",
-                "Nagy nyelvi modellek működése – hogyan „gondolkodik" az AI, és miért fontos ezt érteni",
+                {`Nagy nyelvi modellek működése – hogyan \u201Egondolkodik\u201D az AI, és miért fontos ezt érteni`},
                 "AI modellek a kognitív workflow-ban – melyik modellnek mi a szerepe, és mikor melyiket válaszd",
                 "Az AI mint kognitív partner – nem helyettesítés, hanem együttgondolkodás egy kitágított térben",
                 "Nem a régi folyamatra AI-t, hanem új munkafolyamatokat – a citizen developer szemlélet előrevetítése",

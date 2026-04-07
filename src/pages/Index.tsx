@@ -218,37 +218,43 @@ const Index = () => {
               ]} />
             </DayAccordion>
 
-            <DayAccordion title="2. nap – Advanced kognitív workflow I. (Elemzés & kutatás)" isOpen={!!openDays[2]} onToggle={() => toggleDay(2)}>
+            <DayAccordion title="2. nap – Advanced AI kognitív workflow I. – elemzés, kutatás és döntés-előkészítés egy kitágított kognitív térben" isOpen={!!openDays[2]} onToggle={() => toggleDay(2)}>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
               <p><b>Németh Gábor</b></p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
+              <p className="mt-2 text-sm leading-relaxed">
+                Ez az alkalom arról szól, hogy az AI-val való munka nem promptolás, hanem gondolkodás. A résztvevő megtanulja, hogyan lépjen ki a „kérdezek–kapok választ" mintából, és hogyan alakítson ki valódi kognitív együttműködést az AI-val: több nézőpontból elemezzen, mélyítsen, következtessen — úgy, ahogy eddig csak egy teljes csapat tudott volna. Megismeri a párbeszédtechnikák alapjait, az asszociációs láncokat, a perspektívaváltásokat és a rekurzív gondolkodási modelleket. Megtanulja a Deep Research technikák használatát, a horizontális és vertikális mélyítés logikáját, és a nyílt forrású kutatás alapjait. A nap végére képes lesz AI-jal olyan döntés-előkészítő anyagokat készíteni, amelyek piackutatás szintű mélységet adnak — a hagyományos módszerekhez képest töredék idő alatt.
+              </p>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett tematika</p>
               <CheckList items={[
-                `Komplex szakmai kérdések elemzése strukturált gondolkodással (nem \u201Epromptolás\u201D).`,
-                `Döntés-előkészítő munkafolyamatok: több nézőpont, ellenőrzési pontok, következtetések.`,
-              ]} />
-              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Témák</p>
-              <CheckList items={[
-                `Vertikális (mély) elemzés: bontás, részproblémák, hipotézisek.`,
-                `Horizontális perspektívabővítés: alternatív megoldások, kockázati forgatókönyvek.`,
-                `\u201EKérdésfák\u201D és döntési térkép: hogyan lesz a beszélgetésből szakmai struktúra.`,
-                `Validációs keret: mi az, amit mindig vissza kell ellenőrizni.`,
+                `AI kognitív workflow: mi ez, és miért más, mint a „promptolás"`,
+                `Párbeszédtechnika alapjai – interakciós térképek, asszociációs láncok, hangos gondolkodás módszere`,
+                `Beszélgetést mélyítő technikák – gördülő összefoglalók, perspektívaváltások, visszacsatolási hurkok`,
+                `Döntés-előkészítő munkafolyamatok – több nézőpont, ellenőrzési pontok, következtetések`,
+                `Deep Research technikák – horizontális, vertikális és döntéstámogatói mélyítések`,
+                `Nyílt forrású kutatás alapok – hogyan kutass AI-jal szakmai szinten, forrásokkal alátámasztva`,
+                `Könyvelési folyamatokat támogató use case-ek – a kognitív workflow a gyakorlatban`,
+                `Nyelvi modellek használata a workflow-ban – mikor melyik modellt, mire és miért`,
               ]} />
             </DayAccordion>
 
-            <DayAccordion title="3. nap – Advanced kognitív workflow II. (Tudásbázis & standardizálás)" isOpen={!!openDays[3]} onToggle={() => toggleDay(3)}>
+            <DayAccordion title="3. nap – Advanced AI kognitív workflow II. – tudásbázis, rendszerépítés és vezetői szintű kimenetek" isOpen={!!openDays[3]} onToggle={() => toggleDay(3)}>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
               <p><b>Németh Gábor</b></p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
+              <p className="mt-2 text-sm leading-relaxed">
+                Ez a nap arról szól, hogy a gondolkodásmódból működő rendszer legyen. A résztvevő megtanulja, hogyan építsen AI asszisztált működést, ami nem személyfüggő trükk, hanem ismételhető, tanítható, dokumentálható workflow. Megérti a system utasítás, a tudásbázis és a műveletek hármasát — vagyis azt, hogyan válik egy AI-modellből a te irodádra szabott munkatárs. Megtanulja a „Chat with your data" szemléletet: hogyan dolgozz a saját dokumentumaiddal, adataiddal, és hogyan illesszed be az MCP-gondolkodást a munkafolyamatodba. A nap végére képes lesz saját AI asszisztenst konfigurálni, belső tudásbázist tervezni, és olyan vezetői szintű kimeneteket készíteni — stratégiai jegyzetet, döntés-előkészítő briefet —, amelyekhez eddig külső tanácsadó kellett.
+              </p>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett tematika</p>
               <CheckList items={[
-                `Ismételhető, tanítható AI-munkaminták kialakítása (nem személyfüggő \u201Etrükkök\u201D).`,
-                `Belső tudásbázis és standard workflow alapjai.`,
-              ]} />
-              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Témák</p>
-              <CheckList items={[
-                `Tudásbázis gondolkodás: források, verziók, felelősségek.`,
-                `Workflow minták: szerepkörök, lépések, output sablonok.`,
-                `Modell- és megoldásválasztás: mikor elég egyszerű, mikor kell kontrolláltabb megoldás.`,
-                `Use case-ek előkészítése: milyen adat kell, milyen kockázat van, mi a mérőszám.`,
+                `AI asszisztált működés alapjai – system utasítás, tudásbázis, műveletek hármasa`,
+                `Workflow és agent működés – mitől agent egy folyamat, és mikor melyiket válaszd`,
+                `Belső tudásbázis és standard workflow alapjai – ismételhető, tanítható munkafolyamatok`,
+                `AI asszisztens építése saját feladatokra – az irodádra szabott megoldás, fejlesztői tudás nélkül`,
+                `Chat with your data and docs – dolgozz a saját dokumentumaiddal és adataiddal AI-jal`,
+                `Chat with your… gondolkodásmód és MCP-k – hogyan kapcsold össze az AI-t a rendszereiddel`,
+                `Vezetői szintű kimenetek készítése – stratégiai jegyzet és döntés-előkészítő brief AI-jal`,
+                `A citizen developer útja a gyakorlatban – amikor a könyvelő maga épít megoldást`,
               ]} />
             </DayAccordion>
 

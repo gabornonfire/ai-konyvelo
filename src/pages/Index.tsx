@@ -412,6 +412,8 @@ const Index = () => {
                 `Kriptovaluták könyvelése – alap logikák, tipikus esetek, buktatók`,
                 `Blockchain + AI a gyakorlatban – use case-ek: hogyan lesz a blokklánc a kognitív workflow és a citizen developer szemlélet része`,
               ]} />
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett óraszám</p>
+              <p className="mt-1 text-sm">2×45 perc</p>
 
               <p className="text-sm font-bold mt-4">E-közigazgatás, DÁP és bizalmi szolgáltatások (1×45 perc)</p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Oktató</p>

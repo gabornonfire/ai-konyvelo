@@ -198,7 +198,7 @@ const Index = () => {
           </div>
 
           <div className="col-span-12 space-y-0">
-            <DayAccordion title="1. nap – Belépés az AI korszakba – szemléletváltás, működési alapok és az AI mint kognitív partner" isOpen={!!openDays[1]} onToggle={() => toggleDay(1)}>
+            <DayAccordion title="1. nap (3×45 perc) – Belépés az AI korszakba – szemléletváltás, működési alapok és az AI mint kognitív partner" isOpen={!!openDays[1]} onToggle={() => toggleDay(1)}>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
               <p><b>Németh Gábor</b></p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
@@ -218,7 +218,7 @@ const Index = () => {
               ]} />
             </DayAccordion>
 
-            <DayAccordion title="2. nap – Advanced AI kognitív workflow I. – elemzés, kutatás és döntés-előkészítés egy kitágított kognitív térben" isOpen={!!openDays[2]} onToggle={() => toggleDay(2)}>
+            <DayAccordion title="2. nap (3×45 perc) – Advanced AI kognitív workflow I. – elemzés, kutatás és döntés-előkészítés egy kitágított kognitív térben" isOpen={!!openDays[2]} onToggle={() => toggleDay(2)}>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
               <p><b>Németh Gábor</b></p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
@@ -238,7 +238,7 @@ const Index = () => {
               ]} />
             </DayAccordion>
 
-            <DayAccordion title="3. nap – Advanced AI kognitív workflow II. – tudásbázis, rendszerépítés és vezetői szintű kimenetek" isOpen={!!openDays[3]} onToggle={() => toggleDay(3)}>
+            <DayAccordion title="3. nap (3×45 perc) – Advanced AI kognitív workflow II. – tudásbázis, rendszerépítés és vezetői szintű kimenetek" isOpen={!!openDays[3]} onToggle={() => toggleDay(3)}>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
               <p><b>Németh Gábor</b></p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
@@ -258,58 +258,67 @@ const Index = () => {
               ]} />
             </DayAccordion>
 
-            <DayAccordion title="4. nap – Use Case discovery & validáció (3×45 perc)" isOpen={!!openDays[4]} onToggle={() => toggleDay(4)}>
+            <DayAccordion title="4. nap (3×45 perc) – Use case discovery és validáció – hogyan lesz jó ötletből mérhető eredmény a könyvelőirodában" isOpen={!!openDays[4]} onToggle={() => toggleDay(4)}>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
               <p><b>Laczkó Gábor</b> (Stylers)</p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
+              <p className="mt-2 text-sm leading-relaxed">
+                A legtöbb iroda tudja, hogy „kellene AI", de nem tudja, hol kezdje. Ez a nap pont ezt oldja meg: a résztvevő megtanulja, hogyan azonosítsa a saját irodájában azokat a feladatokat, ahol az AI valódi értéket teremt — és hogyan válassza ki közülük azt a hármat, amivel érdemes elindulni. Nem divatos buzzwordökről lesz szó, hanem arról, hogyan fordítsd le a napi problémáidat — ügyfélkommunikáció, dokumentumfeldolgozás, ismétlődő adminisztráció — validált, mérhető use case-ekké. A nap végére a résztvevőnek lesz egy saját Top 3 listája, amit a képzés további napjain konkrétan el is kezd megvalósítani.
+              </p>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett tematika</p>
               <CheckList items={[
-                `„Jó ötletből" döntésre érett use case: üzleti érték + megvalósíthatóság.`,
-                `Top 3 use case kiválasztása portfólió-szinten.`,
-              ]} />
-              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Témák</p>
-              <CheckList items={[
-                `Use case gyűjtés és tisztázás: mi számít valódi üzleti problémának.`,
-                `SIPOC-alapú keretezés: folyamat, érintettek, hatókör.`,
-                `7 pontos validáció: érték, mérőszám, ROI, komplexitás, megoldási logika.`,
-                `Prioritás és döntés: Top 3 use case rögzítése.`,
+                `Use case gyűjtés és tisztázás – mi számít valódi üzleti problémának egy könyvelőirodában`,
+                `SIPOC-alapú keretezés – folyamat, érintettek, hatókör: hogyan határold be pontosan a feladatot`,
+                `7 pontos validáció – érték, mérőszám, ROI, komplexitás, megoldási logika`,
+                `Prioritás és döntés – Top 3 use case kiválasztása, amivel érdemes elindulni`,
+                `Tipikus könyvelőirodai use case-ek – hol teremt az AI azonnali értéket a napi működésben`,
+                `Az „AI-ra alkalmas" feladat ismérvei – mikor éri meg automatizálni, és mikor nem`,
+                `A PoC purgatórium elkerülése – hogyan ne ragadj le a tesztelésnél`,
+                `Use case portfólió szemlélet – hogyan gondolkodj rendszerben, ne egyedi megoldásokban`,
               ]} />
             </DayAccordion>
 
-            <DayAccordion title="5. nap – Eszközválasztás & AI ökoszisztéma (3×45 perc)" isOpen={!!openDays[5]} onToggle={() => toggleDay(5)}>
+            <DayAccordion title="5. nap (3×45 perc) – Eszközválasztás és AI ökoszisztéma – döntési logika, nem eszközlista" isOpen={!!openDays[5]} onToggle={() => toggleDay(5)}>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
               <p><b>Tiszavölgyi Péter</b> (Stylers)</p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
+              <p className="mt-2 text-sm leading-relaxed">
+                A piacon több száz AI eszköz van, és a legtöbb könyvelő elvész bennük. Ez a nap nem eszközlistát ad, hanem döntési logikát: mikor elég egy egyszerű megoldás, és mikor kell komolyabb építkezés. A résztvevő megérti az AI ökoszisztéma rétegeit — felhasználói, workflow, adat, modell és governance szint — és megtanulja, hogyan gondolkodjon rendszerben, amikor a saját irodájának keres megoldást. Megismeri a low-code/no-code és az agentikus működés közötti különbséget, és világos döntési fát kap: feladat, adatérzékenység, kontroll és skála alapján. A nap végére a résztvevő képes lesz önállóan eldönteni, hogy egy adott feladathoz milyen szintű megoldás kell — anélkül, hogy IT-szakértőre lenne szüksége.
+              </p>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett tematika</p>
               <CheckList items={[
-                `Világos döntési logikát adni: mikor elég egyszerű megoldás, mikor kell komolyabb építkezés.`,
-                `Ökoszisztéma-szemlélet: felhasználói, workflow, adat, modell, governance szint.`,
-              ]} />
-              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Témák</p>
-              <CheckList items={[
-                `Miért nem működik az „eszközlista" gondolkodás.`,
-                `Low-code/no-code és agentic működés: mikor hasznos, mikor kockázatos.`,
-                `Döntési fa: feladat, adatérzékenység, kontroll, skála.`,
-                `Könyvelőirodai minták: hol tud gyorsan értéket adni, hol nem.`,
+                `Miért nem működik az „eszközlista" gondolkodás – és mi az AI ökoszisztéma szemlélet`,
+                `Ökoszisztéma-rétegek – felhasználói, workflow, adat, modell és governance szint`,
+                `Low-code/no-code és agentikus működés – mikor hasznos, mikor kockázatos`,
+                `Döntési fa eszközválasztáshoz – feladat, adatérzékenység, kontroll és skála alapján`,
+                `Könyvelőirodai minták – hol tud az AI gyorsan értéket adni, és hol nem`,
+                `A „megfelelő méretű" megoldás elve – ne lőj ágyúval verébre, de ne is maradj Excelben`,
+                `Eszközök a kognitív workflow-ban – hogyan illeszkednek az egyes eszközök a rendszerbe`,
+                `Skálázhatóság szemlélet – hogyan válassz ma úgy, hogy holnap is működjön`,
               ]} />
             </DayAccordion>
 
-            <DayAccordion title="6. nap – Low-code / No-code alapok (3×45 perc)" isOpen={!!openDays[6]} onToggle={() => toggleDay(6)}>
+            <DayAccordion title="6. nap (3×45 perc) – Low-code / No-code alapok – amikor a könyvelő maga épít automatizációt" isOpen={!!openDays[6]} onToggle={() => toggleDay(6)}>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
               <p><b>Vajky Gergő</b></p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
+              <p className="mt-2 text-sm leading-relaxed">
+                Ez a nap a citizen developer gondolat gyakorlati megvalósítása. A résztvevő megtanulja, hogyan lehet fejlesztői tudás nélkül kisebb, de hasznos automatizációkat építeni a könyvelőiroda mindennapjaiba — vizuális eszközökkel, összekötésekkel, kontrollpontokkal. Nem programozásról van szó, hanem arról, hogy egy ismétlődő folyamatot — legyen az számlafeldolgozás, adategyeztetés vagy ügyfélértesítés — a könyvelő maga tud rendszerbe szervezni. A nap végére a résztvevő képes lesz azonosítani, mit érdemes automatizálni, hogyan néz ki egy biztonságos adatáramlás, és mi az a minimum dokumentálás, amitől az egész auditálható marad.
+              </p>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett tematika</p>
               <CheckList items={[
-                `Megmutatni, hogyan lehet fejlesztői tudás nélkül „kicsi, de hasznos" automatizációkat építeni.`,
-                `Nem „programozás": vizuális eszközök, összekötések, kontrollpontok.`,
-              ]} />
-              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Témák</p>
-              <CheckList items={[
-                `Mit érdemes automatizálni könyvelőirodában (biztonságos scope-ok).`,
-                `Adatáramlás: input → feldolgozás → output; hol kell emberi ellenőrzés.`,
-                `Minőségkapuk és hibakezelés: hogyan ne „csússzon el" a rendszer.`,
-                `Dokumentálás: mi az a minimum, amitől auditálható marad.`,
+                `Mit érdemes automatizálni egy könyvelőirodában – biztonságos scope-ok, gyors eredmények`,
+                `Adatáramlás alapok – input → feldolgozás → output: hol kell emberi ellenőrzés`,
+                `Vizuális eszközök és összekötések – automatizáció fejlesztői tudás nélkül`,
+                `Minőségkapuk és hibakezelés – hogyan ne „csússzon el" a rendszer`,
+                `Dokumentálás – mi az a minimum, amitől auditálható marad`,
+                `Tipikus könyvelőirodai automatizációk – számlafeldolgozás, adategyeztetés, ügyfélértesítés`,
+                `Kontrollpontok beépítése – mikor és hol kell emberi jóváhagyás a folyamatban`,
+                `Az első saját automatizáció – gyakorlati feladat az alkalmon belül`,
               ]} />
             </DayAccordion>
 
-            <DayAccordion title="7. nap – Szakértői márka és digitális jelenlét – hogyan találjanak rád az ügyfelek az AI-korszakban (3×45 perc)" isOpen={!!openDays[7]} onToggle={() => toggleDay(7)}>
+            <DayAccordion title="7. nap (3×45 perc) – Szakértői márka és digitális jelenlét – hogyan találjanak rád az ügyfelek az AI-korszakban" isOpen={!!openDays[7]} onToggle={() => toggleDay(7)}>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
               <p><b>Pásti Edina</b></p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
@@ -329,7 +338,7 @@ const Index = () => {
               ]} />
             </DayAccordion>
 
-            <DayAccordion title="8. nap – AI a könyvelőiroda mindennapjaiban – gyorsabb kommunikáció, okosabb folyamatok, kevesebb admin (3×45 perc)" isOpen={!!openDays[8]} onToggle={() => toggleDay(8)}>
+            <DayAccordion title="8. nap (3×45 perc) – AI a könyvelőiroda mindennapjaiban – gyorsabb kommunikáció, okosabb folyamatok, kevesebb admin" isOpen={!!openDays[8]} onToggle={() => toggleDay(8)}>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
               <p><b>Pásti Edina</b></p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
@@ -347,24 +356,27 @@ const Index = () => {
               ]} />
             </DayAccordion>
 
-            <DayAccordion title="9. nap – EU jogszabály & Data Governance (3×45 perc)" isOpen={!!openDays[9]} onToggle={() => toggleDay(9)}>
+            <DayAccordion title="9. nap (3×45 perc) – AI governance, adatvédelem és megfelelés – működő biztonsági keret, nem papírgyártás" isOpen={!!openDays[9]} onToggle={() => toggleDay(9)}>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
               <p><b>Dr. Firniksz Judit</b></p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
+              <p className="mt-2 text-sm leading-relaxed">
+                A governance nem arról szól, hogy mindenre nemet mondjunk, hanem arról, hogy az iroda úgy használjon AI-t, hogy közben védve legyen — jogilag, adatvédelmileg és működésileg. Ez a nap megmutatja, hogyan értelmezze egy könyvelőiroda az AI-ra vonatkozó szabályozást, hogyan kezelje az adatokat felelősen, és hogyan építsen ki olyan belső keretrendszert, ami tényleg betartható. A résztvevő megérti, miért más az AI megfelelés, mint a „hagyományos" informatikai biztonság, hogyan kapcsolódik össze a data governance, az AI governance és az információbiztonság — és hogyan kerülheti el, hogy az AI-bevezetés elakadjon a szabályozási bizonytalanságban.
+              </p>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett tematika</p>
               <CheckList items={[
-                `EU AI szabályozási keretrendszer megértése és gyakorlati alkalmazása.`,
-                `Működő AI és data governance rendszer kiépítése a cégen belül.`,
-              ]} />
-              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Témák</p>
-              <CheckList items={[
-                `AI Act, GDPR, Data Act, DSA, DMA és kapcsolódó adatjogi keretek.`,
-                `Értelmezési kérdések, kötelezettségek, felelősségek.`,
-                `Hogyan építs ki működő AI governance rendszert a cégen belül?`,
-                `Data governance + AI governance + információbiztonság összekötése.`,
+                `Hogyan érti meg egymást a jogász és az IT – az AI-megfelelés közös nyelve`,
+                `Hogyan kezdjünk neki az AI-megfelelésnek – a „forró krumpli" effektus elkerülése`,
+                `Miért más az AI, mint a hagyományos IT-rendszerek – mit jelent ez a jog és a gyakorlat számára`,
+                `Data governance, AI governance, információbiztonság – miért nem létezhetnek egymás nélkül`,
+                `Konfekció vs. testreszabás – létezik-e egységes AI governance megoldás egy könyvelőirodának`,
+                `AI Act, GDPR és a könyvelőirodai gyakorlat – mit kell tényleg tudnod és betartanod`,
+                `A PoC purgatórium governance oldala – hogyan ne álljon le az innováció a szabályozás miatt`,
+                `Belső szabályrendszer kialakítása – a minimum, amivel biztonságosan elindulhatsz`,
               ]} />
             </DayAccordion>
 
-            <DayAccordion title="10. nap – Blockchain, DÁP & digitális eszközök (3×45 perc)" isOpen={!!openDays[10]} onToggle={() => toggleDay(10)}>
+            <DayAccordion title="10. nap (3×45 perc) – Blockchain, DÁP & digitális eszközök" isOpen={!!openDays[10]} onToggle={() => toggleDay(10)}>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
               <p><b>Keresni kell ide még</b></p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
@@ -372,7 +384,7 @@ const Index = () => {
                 `Blockchain technológia és a Digitális Állampolgári Portál (DÁP) megértése könyvelői szemszögből.`,
                 `Digitális eszközök pénzügyi és könyvelési hatásainak feltérképezése.`,
               ]} />
-              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Témák</p>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett tematika</p>
               <CheckList items={[
                 `Blockchain alapok: tokenek, intelligens szerződések, decentralizált rendszerek.`,
                 `Kriptovaluták könyvelése – alap logikák, tipikus esetek.`,
@@ -381,7 +393,7 @@ const Index = () => {
               ]} />
             </DayAccordion>
 
-            <DayAccordion title="11. nap – ROI, skálázás és lezárás (90 napos akcióterv)" isOpen={!!openDays[11]} onToggle={() => toggleDay(11)}>
+            <DayAccordion title="11. nap (3×45 perc) – ROI, skálázás és lezárás (90 napos akcióterv)" isOpen={!!openDays[11]} onToggle={() => toggleDay(11)}>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
               <p><b>Koltai Balázs</b></p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
@@ -389,7 +401,7 @@ const Index = () => {
                 `Összerakni a teljes képet: mérés, ROI, skálázás, változáskezelés.`,
                 <>A résztvevő egy konkrét <b>90 napos tervvel</b> és <b>vezetői összefoglalóval</b> zár.</>,
               ]} />
-              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Témák</p>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett tematika</p>
               <CheckList items={[
                 `ROI-keret: működési és üzleti hatások mérése (nem csak pénzügy).`,
                 `Mikor és hogyan skálázunk use case-t: döntési kapuk és kontrollpontok.`,

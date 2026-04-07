@@ -412,6 +412,8 @@ const Index = () => {
                 `Kriptovaluták könyvelése – alap logikák, tipikus esetek, buktatók`,
                 `Blockchain + AI a gyakorlatban – use case-ek: hogyan lesz a blokklánc a kognitív workflow és a citizen developer szemlélet része`,
               ]} />
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett óraszám</p>
+              <p className="mt-1 text-sm">2×45 perc</p>
 
               <p className="text-sm font-bold mt-4">E-közigazgatás, DÁP és bizalmi szolgáltatások (1×45 perc)</p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Oktató</p>
@@ -425,7 +427,7 @@ const Index = () => {
                 `Use case-ek: az e-közigazgatás mint a könyvelőirodai workflow része – hogyan épül be a DÁP és a NAV a citizen developer szemlélettel épített munkafolyamatokba`,
               ]} />
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett óraszám</p>
-              <p className="mt-1 text-sm">3×45 perc</p>
+              <p className="mt-1 text-sm">2×45 perc</p>
             </DayAccordion>
 
             <DayAccordion title="11. nap – ROI, skálázás és lezárás (90 napos akcióterv)" isOpen={!!openDays[11]} onToggle={() => toggleDay(11)}>

@@ -321,20 +321,21 @@ const Index = () => {
               ]} />
             </DayAccordion>
 
-            <DayAccordion title="8. nap – Könyvelői AI Office (3×45 perc)" isOpen={!!openDays[8]} onToggle={() => toggleDay(8)}>
+            <DayAccordion title="8. nap – AI a könyvelőiroda mindennapjaiban – gyorsabb kommunikáció, okosabb folyamatok, kevesebb admin (3×45 perc)" isOpen={!!openDays[8]} onToggle={() => toggleDay(8)}>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
               <p><b>Pásti Edina</b></p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
+              <p className="mt-2 text-sm leading-relaxed">Ez a nap a napi irodai valóságról szól: e-mailek, ügyfélkérdések, ajánlatok, dokumentumok, prezentációk — minden, ami időt visz, de nem termel értéket. A résztvevő megtanulja, hogyan lehet ezeket a feladatokat AI-jal rendszerszinten felgyorsítani úgy, hogy a minőség és az iroda szakmai hangja megmaradjon. Nem arról van szó, hogy „a gép válaszol helyetted", hanem arról, hogy a rutinfeladatokra fordított idő töredékére csökken — miközben a kommunikáció következetes, az output professzionális. A nap végére a résztvevő saját AI asszisztenst épít konkrét irodai feladatokra, és kézzel fogható eszközöket visz haza: sablonokat, workflow-kat, dashboard-ot.</p>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett tematika</p>
               <CheckList items={[
-                `AI a mindennapi irodai működésben: gyors, minőségi kommunikáció és anyagkészítés.`,
-                `Hatékonyabb belső folyamatok AI-eszközökkel.`,
-              ]} />
-              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Témák</p>
-              <CheckList items={[
-                `Ügyfélszolgálati kérdések kezelése, e-mail válaszok gyorsítása.`,
-                `Prezentációkészítés, vizualizáció, dokumentumok.`,
-                `Minőség + stílus: hogyan lesz következetes az iroda hangja.`,
-                `Belső tudásbázis és munkafolyamatok AI-támogatása.`,
+                `Ügyfélkérdések kezelése AI-jal – sablonok, gyors válaszok, hangnem megőrzése`,
+                `E-mail kommunikáció gyorsítása AI-jal – nehéz helyzetek, fizetési felszólítás, ügyfélkapcsolat`,
+                `Árajánlat-adási folyamat gyorsítása – az ajánlattól a lezárásig, AI-jal támogatva`,
+                `AI asszisztens építése saját feladatokra – személyre szabott megoldás, fejlesztői tudás nélkül`,
+                `Prezentáció és vizuális anyagkészítés AI-jal – professzionális output percek alatt`,
+                `Dokumentumok feldolgozása AI-jal – gyorsabb feldolgozás, kevesebb manuális munka`,
+                `Az iroda hangja – következetes kommunikáció és stílus, AI-jal skálázva`,
+                `Saját dashboard összeállítása AI-jal – napi feladatlista, projektek haladása, átlátható kontroll`,
               ]} />
             </DayAccordion>
 

@@ -198,21 +198,23 @@ const Index = () => {
           </div>
 
           <div className="col-span-12 space-y-0">
-            <DayAccordion title="1. nap – AI gondolkodásmód és szakmai transzformáció (Felvezető)" isOpen={!!openDays[1]} onToggle={() => toggleDay(1)}>
+            <DayAccordion title="1. nap – Belépés az AI korszakba – szemléletváltás, működési alapok és az AI mint kognitív partner" isOpen={!!openDays[1]} onToggle={() => toggleDay(1)}>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
               <p><b>Németh Gábor</b></p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
+              <p className="mt-2 text-sm leading-relaxed">
+                Ez az alkalom mindennek az alapja. Nem arról szól, hogy „hogyan használd a ChatGPT-t", hanem arról, hogy megértsd: egy olyan paradigmaváltás zajlik, ami alapjaiban változtatja meg a könyvelői szakma működését. A résztvevő áttekintést kap az AI fejlődéséről és a nagy nyelvi modellek működéséről — de ami ennél fontosabb: megérti, hogy az AI nem a jelenlegi munkafolyamatainkra ül rá, hanem a munkafolyamatok maguk alakulnak át. Az agentikus AI-korszak küszöbén egy bevallás kitöltése, egy form feldolgozása már nem „segítség AI-jal", hanem AI-ra delegált feladat lesz. Ez azt jelenti, hogy a könyvelő szerepe is változik: egy kitágított kognitív térben, AI-kollégákkal együtt dolgozva, workflow-szemléletben kell gondolkodnia — ami előrevetíti, hogy gyakorlatilag egy új típusú, ma még „fejlesztőinek" tartott munkavégzés felé haladunk. A nap végére a résztvevőben kialakul az a szemléleti alap, amire a képzés többi napja épül — és világossá válik, hogy az AI-jártasság ma már nem versenyelőny, hanem működési feltétel.
+              </p>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett tematika</p>
               <CheckList items={[
-                `Az AI-t \u201Ekognitív társ\u201D-ként értelmezni: kiterjesztett gondolkodási tér, nem eszköztrükk.`,
-                `Megérteni, miért válik szét a piac: rendszerszintű működés vs. manuális túlterheltség.`,
-                `Megtanulni a szakmai felelősség és validáció alapmintáit (auditálhatóság könyvelői nyelven).`,
-              ]} />
-              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Témák</p>
-              <CheckList items={[
-                `AI mint kognitív partner: mikor \u201Esegít\u201D, mikor \u201Ekockázat\u201D.`,
-                `Kontextus, forráskezelés, feltételezések jelölése – szakmai fegyelem.`,
-                `Minőségkapuk: ellenőrzési pontok, másodvélemény, dokumentálás.`,
-                `Használati szabályok: mi kerülhet be, mi nem (adatérzékenység alapok).`,
+                "A paradigmaváltás, ami már zajlik – miért nem opció a kivárás a könyvelői szakmában",
+                "Az agentikus AI-korszak küszöbén – amikor az AI már nem csak válaszol, hanem végrehajt",
+                "Nagy nyelvi modellek működése – hogyan „gondolkodik" az AI, és miért fontos ezt érteni",
+                "AI modellek a kognitív workflow-ban – melyik modellnek mi a szerepe, és mikor melyiket válaszd",
+                "Az AI mint kognitív partner – nem helyettesítés, hanem együttgondolkodás egy kitágított térben",
+                "Nem a régi folyamatra AI-t, hanem új munkafolyamatokat – a citizen developer szemlélet előrevetítése",
+                "AI-jártasság: a különbséget nem a gép, hanem a felhasználó tudása jelenti",
+                "Gyakorlati demonstrációk – hogyan változik meg a munka az AI-jal, élőben",
               ]} />
             </DayAccordion>
 

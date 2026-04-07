@@ -311,12 +311,12 @@ const Index = () => {
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett tematika</p>
               <CheckList items={[
                 `A könyvelő mint szakértő – hogyan kommunikálj érthetően a saját célközönségednek, AI segítségével`,
-                `Miért nem elég ma már az ajánlás? Pozicionálás és szakértői márka alapjai`,
-                `Lokális marketing és Google Cégem – hogyan találjanak rád a környékeden`,
+                `Miért nem elég ma már az ajánlás? Pozicionálás és szakértői márka az AI-vezérelte piacon`,
+                `Lokális marketing és Google Cégem – hogyan találjanak rád a környékeden, mielőtt az AI válaszol helyetted`,
                 `Hogyan találnak ránk az AI keresők? SEO és GEO alapok`,
                 `Piackutatás és versenytárselemzés AI-jal – mit csinálnak mások, te mit csinálj másképp`,
-                `Onepager és ajánlati anyag – hogyan építs fel olyan ajánlatot, ami el is ad`,
-                `Tartalomstratégia: hol kommunikálj és miért – weboldal vs. Facebook vs. LinkedIn döntési logika`,
+                `Onepager és ajánlati anyag percek alatt – professzionális anyagok, amihez eddig ügynökség kellett`,
+                `Tartalomstratégia: hol kommunikálj és miért – döntési logika, amit az AI tesz kivitelezhetővé`,
                 `Tartalomgyártás AI-jal – saját szakterületi tartalmak gyorsan, hitelesen, saját tartalomgyártó AI asszisztens építése`,
               ]} />
             </DayAccordion>

@@ -394,20 +394,35 @@ const Index = () => {
               <p className="mt-1 text-sm">3×45 perc</p>
             </DayAccordion>
 
-            <DayAccordion title="10. nap – Blockchain, DÁP & digitális eszközök" isOpen={!!openDays[10]} onToggle={() => toggleDay(10)}>
-              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
-              <p><b>Keresni kell ide még</b></p>
-              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
-              <CheckList items={[
-                `Blockchain technológia és a Digitális Állampolgári Portál (DÁP) megértése könyvelői szemszögből.`,
-                `Digitális eszközök pénzügyi és könyvelési hatásainak feltérképezése.`,
-              ]} />
+            <DayAccordion title="10. nap – Blockchain, digitális állampolgárság és e-közigazgatás – a könyvelő digitális jövőjének új rétegei" isOpen={!!openDays[10]} onToggle={() => toggleDay(10)}>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Cél</p>
+              <p className="mt-2 text-sm leading-relaxed">
+                Ez a nap két, egymást erősítő témát fog össze, amelyek a következő években alapjaiban változtatják meg a könyvelők munkakörnyezetét. Az AI egyik legnagyobb ereje pont az, hogy korábban teljesen külön világnak számító területeket — blockchain, e-közigazgatás, adatkezelés — egyetlen gondolkodási és működési keretbe tud összehozni. Ami eddig három különálló szakma volt, az most egyetlen workflow része lehet. Az első blokkban a blockchain technológia kerül fókuszba: nem kriptovaluta-spekuláció, hanem konkrét könyvelőirodai use case-eken keresztül mutatjuk meg, hogyan gyorsíthatnak a blokkláncon rögzíthető adatok és az intelligens szerződések valós folyamatokat — és hogyan illeszthetők be az AI-val támogatott workflow-kba. A második blokkban a Digitális Állampolgárság Program (DÁP), az eIDAS 2.0 és a bizalmi szolgáltatások gyakorlati hatásait járjuk körbe szintén use case-eken keresztül: hogyan válik az eAláírás, a NAV digitális átalakulása és a meghatalmazáskezelés a citizen developer szemlélettel épített munkafolyamatok szerves részévé. A nap végére a résztvevő érti, milyen új digitális rétegekre kell felkészülnie, és hogyan illeszkednek ezek a képzés során felépített keretrendszerbe.
+              </p>
+
+              <p className="text-sm font-bold mt-4">Blockchain a könyvelői gyakorlatban (2×45 perc)</p>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Oktató</p>
+              <p><b>Marosölgyi Zsolt</b></p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett tematika</p>
               <CheckList items={[
-                `Blockchain alapok: tokenek, intelligens szerződések, decentralizált rendszerek.`,
-                `Kriptovaluták könyvelése – alap logikák, tipikus esetek.`,
-                `Digitális Állampolgári Portál (DÁP): funkciók, adatkapcsolatok, könyvelői relevanciák.`,
-                `Digitális eszközök pénzügyi hatása: beszámoló és kockázat szempontból.`,
+                `Blockchain alapok könyvelői szemmel – mi az, ami valóban releváns, és mi a hype`,
+                `Intelligens szerződések és automatikus végrehajtás – hogyan gyorsíthat könyvelési folyamatokat`,
+                `Tokenizáció és digitális eszközök – mit kell tudnia a könyvelőnek a pénzügyi és beszámolási hatásokról`,
+                `Blokkláncon rögzített adatok – hitelesítés, auditálhatóság, nyomon követhetőség`,
+                `Kriptovaluták könyvelése – alap logikák, tipikus esetek, buktatók`,
+                `Blockchain + AI a gyakorlatban – use case-ek: hogyan lesz a blokklánc a kognitív workflow és a citizen developer szemlélet része`,
+              ]} />
+
+              <p className="text-sm font-bold mt-4">E-közigazgatás, DÁP és bizalmi szolgáltatások (1×45 perc)</p>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Oktató</p>
+              <p><b>Dr. Kovács Ferenc</b></p>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett tematika</p>
+              <CheckList items={[
+                `A Digitális Állampolgárság Program (DÁP) és ami mögötte van – eAzonosítás, eAláírás, Adattárca`,
+                `eIDAS 2.0 és az európai digitális személyiadat-tárca – mit jelent ez a magyar könyvelőnek`,
+                `NAV digitális csatornák átalakulása – meghatalmazás, bevalláskezelés, adatkapcsolatok az új rendszerben`,
+                `Bizalmi szolgáltatások a gyakorlatban – elektronikus aláírás, hitelesítés, dokumentumkezelés`,
+                `Use case-ek: az e-közigazgatás mint a könyvelőirodai workflow része – hogyan épül be a DÁP és a NAV a citizen developer szemlélettel épített munkafolyamatokba`,
               ]} />
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett óraszám</p>
               <p className="mt-1 text-sm">3×45 perc</p>

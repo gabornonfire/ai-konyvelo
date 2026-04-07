@@ -430,20 +430,21 @@ const Index = () => {
               <p className="mt-1 text-sm">2×45 perc</p>
             </DayAccordion>
 
-            <DayAccordion title="11. nap – ROI, skálázás és lezárás (90 napos akcióterv)" isOpen={!!openDays[11]} onToggle={() => toggleDay(11)}>
+            <DayAccordion title="11. nap – ROI, skálázás és lezárás – 90 napos akcióterv a könyvelőirodád AI-transzformációjához" isOpen={!!openDays[11]} onToggle={() => toggleDay(11)}>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
               <p><b>Koltai Balázs</b></p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
-              <CheckList items={[
-                `Összerakni a teljes képet: mérés, ROI, skálázás, változáskezelés.`,
-                <>A résztvevő egy konkrét <b>90 napos tervvel</b> és <b>vezetői összefoglalóval</b> zár.</>,
-              ]} />
+              <p className="mt-1 text-sm leading-relaxed">
+                Ez az utolsó alkalom összerakja az egészet. A résztvevő az elmúlt napok során felépített tudást — gondolkodásmód, workflow-k, use case-ek, eszközök, governance — most egyetlen mérhető, végrehajtható keretbe foglalja. Megtanulja, hogyan értékelje az AI-kezdeményezéseit nem csak pénzügyi, hanem működési és üzleti szempontból is: mi az, ami azonnal megtérül, mi az, ami hosszú távon hoz értéket, és mi az, amit érdemes elengedni. Megérti, mikor és hogyan érdemes egy bevált use case-t skálázni a teljes irodára, és hogyan kapcsolja össze a stratégiát, a governance-t és a változáskezelést a saját irodája adottságaival. A nap végére a résztvevő két kézzel fogható kimenettel távozik: egy vezetői szintű döntés-előkészítő összefoglalóval, ami alkalmas a támogatások megszerzésére és a belső jóváhagyásra, valamint egy konkrét 90 napos akciótervvel, ami pilot → mérés → skálázás logikában vezeti végig a következő lépéseket.
+              </p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett tematika</p>
               <CheckList items={[
-                `ROI-keret: működési és üzleti hatások mérése (nem csak pénzügy).`,
-                `Mikor és hogyan skálázunk use case-t: döntési kapuk és kontrollpontok.`,
-                `Stratégia + governance + kultúra: hogyan lesz \u201Eüzemszerű\u201D a változás.`,
-                `Vezetői döntéselőkészítő anyag: támogatás megszerzése, jóváhagyás.`,
+                `ROI-keret könyvelőirodáknak – hogyan mérjük az AI hatását működési, üzleti és pénzügyi szempontból`,
+                `Mikor és hogyan skálázzunk – döntési kapuk és kontrollpontok: mikortól érdemes egy use case-t az egész irodára kiterjeszteni`,
+                `Stratégia + governance + kultúra – hogyan lesz „üzemszerű" a változás egy kisebb szervezetben`,
+                `Változáskezelés könyvelőirodai realitásban – hogyan vigyük magunkkal a kollégákat és az ügyfeleket`,
+                `Vezetői döntés-előkészítő anyag elkészítése – a támogatás megszerzése és a belső jóváhagyás eszköze`,
+                `90 napos akcióterv összeállítása – pilot → mérés → skálázás, konkrét lépésekkel és határidőkkel`,
               ]} />
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett óraszám</p>
               <p className="mt-1 text-sm">3×45 perc</p>

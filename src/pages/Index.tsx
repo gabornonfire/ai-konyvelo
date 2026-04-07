@@ -427,7 +427,7 @@ const Index = () => {
                 `Use case-ek: az e-közigazgatás mint a könyvelőirodai workflow része – hogyan épül be a DÁP és a NAV a citizen developer szemlélettel épített munkafolyamatokba`,
               ]} />
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett óraszám</p>
-              <p className="mt-1 text-sm">3×45 perc</p>
+              <p className="mt-1 text-sm">2×45 perc</p>
             </DayAccordion>
 
             <DayAccordion title="11. nap – ROI, skálázás és lezárás (90 napos akcióterv)" isOpen={!!openDays[11]} onToggle={() => toggleDay(11)}>

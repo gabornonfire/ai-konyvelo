@@ -301,20 +301,23 @@ const Index = () => {
               ]} />
             </DayAccordion>
 
-            <DayAccordion title="7. nap – Könyvelő marketing, SEO/GEO (3×45 perc)" isOpen={!!openDays[7]} onToggle={() => toggleDay(7)}>
+            <DayAccordion title="7. nap – Szakértői márka és digitális jelenlét – hogyan találjanak rád az ügyfelek az AI-korszakban (3×45 perc)" isOpen={!!openDays[7]} onToggle={() => toggleDay(7)}>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2">Oktató</p>
               <p><b>Pásti Edina</b></p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
+              <p className="mt-2 text-sm leading-relaxed">
+                Ez a nap arról szól, hogy a szakmai tudásod önmagában már nem elég — láthatóvá is kell tenned. A résztvevő megtanulja, hogyan pozicionálja magát szakértőként a saját piacán, hogyan építsen fel olyan digitális jelenlétet, ami nem „marketinges hype", hanem hiteles, szakmai alapú kommunikáció. Megérti, hogyan működik ma a keresés — beleértve az AI-alapú keresőket is —, és hogyan gondoskodhat arról, hogy az irodája ott legyen, ahol a potenciális ügyfelek keresnek. A nap végére képes lesz AI-jal piackutatást végezni, versenytársakat elemezni, hatékony ajánlati anyagot összerakni, és egy saját tartalomgyártó rendszert felépíteni, amivel következetesen és hitelesen tud kommunikálni — anélkül, hogy marketingesnek kellene lennie.
+              </p>
+              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett tematika</p>
               <CheckList items={[
-                `Marketing alapok könyvelőirodáknak: egyszerű, mérhető, nem „reels-hype".`,
-                `SEO és GEO (Generative Engine Optimization) alapok a könyvelői szektorban.`,
-              ]} />
-              <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Témák</p>
-              <CheckList items={[
-                `Piackutatás, versenytárselemzés, pozicionálás.`,
-                `Tartalomstratégia: mit kommunikáljunk, milyen ritmusban.`,
-                `SEO/GEO: hogyan találjanak ránk az ügyfelek az AI-korszakban.`,
-                `Onepager, ajánlat, vizuális anyagok – gyors prototípusok.`,
+                `A könyvelő mint szakértő – hogyan kommunikálj érthetően a saját célközönségednek, AI segítségével`,
+                `Miért nem elég ma már az ajánlás? Pozicionálás és szakértői márka alapjai`,
+                `Lokális marketing és Google Cégem – hogyan találjanak rád a környékeden`,
+                `Hogyan találnak ránk az AI keresők? SEO és GEO alapok`,
+                `Piackutatás és versenytárselemzés AI-jal – mit csinálnak mások, te mit csinálj másképp`,
+                `Onepager és ajánlati anyag – hogyan építs fel olyan ajánlatot, ami el is ad`,
+                `Tartalomstratégia: hol kommunikálj és miért – weboldal vs. Facebook vs. LinkedIn döntési logika`,
+                `Tartalomgyártás AI-jal – saját szakterületi tartalmak gyorsan, hitelesen, saját tartalomgyártó AI asszisztens építése`,
               ]} />
             </DayAccordion>
 

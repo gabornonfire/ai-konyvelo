@@ -112,8 +112,8 @@ const Index = () => {
             </div>
             <div className="rounded-lg border border-white/20 bg-white/10 backdrop-blur-sm p-7">
               <Award className="text-white/80 mb-4" size={32} />
-              <h3 className="text-white text-lg font-bold mb-2 normal-case tracking-normal">Minősítési logika</h3>
-              <p className="text-white/80 text-sm">A tudásszint visszaigazolása a cél – nem automatikus {`\u201Eoklevél\u201D`}. Könyvelői környezetre optimalizált.</p>
+               <h3 className="text-white text-lg font-bold mb-2 normal-case tracking-normal">Gondolkodási infrastruktúra, nem eszköztréning</h3>
+               <p className="text-white/80 text-sm">Az AI-t nem automatizációs gyorsítóként mutatjuk be, hanem olyan rendszerként, ami átalakítja a döntéshozatalt, a tudásmunkát és a szakmai együttműködést. A valódi érték nem a gyorsaságban van, hanem a jobb döntésekben és a skálázható működésben.</p>
             </div>
           </div>
 

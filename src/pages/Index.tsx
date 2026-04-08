@@ -419,13 +419,13 @@ const Index = () => {
       <section id="outcomes" className="py-20 px-[5%]">
         <div className="max-w-content mx-auto">
           <InfoCard>
-            <h2 className="text-[26px] font-semibold leading-[1.15] tracking-tight">Mit kap kézzelfoghatóan a résztvevő?</h2>
+            <h2 className="text-[26px] font-semibold leading-[1.15] tracking-tight">Mit viszel haza a képzésről?</h2>
             <CheckList items={[
-              <><b>Top 3 validált use case</b> (érték + kockázat + megvalósíthatóság vázlat)</>,
-              <><b>ROI keret</b> (mérőszámok, döntési kapuk, prioritás logika)</>,
-              <><b>Governance alapváz</b> (hozzáférés, adatkezelés, audit nyomvonal – minimum szint)</>,
-              <><b>90 napos akcióterv</b> (pilot → mérés → skálázás)</>,
-              <><b>Standard workflow minták</b> (dokumentálható működéshez)</>,
+              <><b>Saját, validált AI use case-ek</b> — nem általános ötletek, hanem a te irodádra kidolgozott, mérhető feladatok</>,
+              <><b>ROI-keret</b> — amivel meg tudod mutatni, hogy az AI-bevezetés milyen üzleti és működési értéket hoz</>,
+              <><b>Governance alapváz</b> — a minimum belső szabályrendszer, amivel biztonságosan és megfelelően indulhatsz</>,
+              <><b>Standard workflow minták</b> — dokumentálható, ismételhető munkafolyamatok, amiket az irodádban azonnal bevezethetsz</>,
+              <><b>Vezetői döntés-előkészítő anyag</b> — amivel a támogatást és jóváhagyást megszerezheted a következő lépésekhez</>,
             ]} />
           </InfoCard>
         </div>

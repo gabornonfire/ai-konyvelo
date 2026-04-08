@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
-  { href: "#vision", label: "Összkép" },
+  { href: "#vision", label: "Áttekintés" },
   { href: "#days", label: "Tematika" },
-  { href: "#outcomes", label: "Eredmények" },
-  { href: "#cta", label: "Next step" },
+  { href: "#outcomes", label: "Mit kapsz?" },
+  { href: "#cta", label: "Következő lépés" },
 ];
 
 const Topbar = () => {

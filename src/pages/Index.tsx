@@ -96,24 +96,24 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="rounded-lg border border-white/20 bg-white/10 backdrop-blur-sm p-7">
-              <Target className="text-white/80 mb-4" size={32} />
-              <h3 className="text-white text-lg font-bold mb-2 normal-case tracking-normal">Nem eszközlista</h3>
-              <p className="text-white/80 text-sm">Döntési logikát adunk: mikor elég az egyszerű megoldás, mikor kell kontrolláltabb építkezés.</p>
+              <Users className="text-white/80 mb-4" size={32} />
+              <h3 className="text-white text-lg font-bold mb-2 normal-case tracking-normal">11 szakértő, 11 nézőpont</h3>
+              <p className="text-white/80 text-sm">AI-stratéga, jogász, automatizációs szakértő, marketing-specialista, blockchain-szakértő — minden témát az adott terület gyakorló szakembere tanít, nem egy ember magyaráz el mindent.</p>
             </div>
             <div className="rounded-lg border border-white/20 bg-white/10 backdrop-blur-sm p-7">
-              <Play className="text-white/80 mb-4" size={32} />
-              <h3 className="text-white text-lg font-bold mb-2 normal-case tracking-normal">Nem prompt-gyűjtemény</h3>
-              <p className="text-white/80 text-sm">Workflow-t tanítunk: kontextus, validáció, dokumentálás – hogy a minőség ne emberfüggő legyen.</p>
+              <BrainCircuit className="text-white/80 mb-4" size={32} />
+              <h3 className="text-white text-lg font-bold mb-2 normal-case tracking-normal">Új készségek, kitágított gondolkodás</h3>
+              <p className="text-white/80 text-sm">Nem a meglévő rutinodra tanítunk rá AI-t. A képzés olyan kognitív és technológiai készségeket ad, amelyekkel új szemmel látsz rá a saját folyamataidra — és olyat is meg tudsz oldani, amit eddig el sem tudtál volna képzelni.</p>
             </div>
             <div className="rounded-lg border border-white/20 bg-white/10 backdrop-blur-sm p-7">
               <Scale className="text-white/80 mb-4" size={32} />
-              <h3 className="text-white text-lg font-bold mb-2 normal-case tracking-normal">Jog + governance + ROI</h3>
-              <p className="text-white/80 text-sm">Nem külön blokkok, hanem összekapcsolt működési keret. Stabil működés: pilot → mérés → skálázás.</p>
+              <h3 className="text-white text-lg font-bold mb-2 normal-case tracking-normal">Jog, governance és ROI egy keretben</h3>
+              <p className="text-white/80 text-sm">Nem külön blokkok, hanem összekapcsolt rendszer. Megfelelsz az AI Act-nak, méred a megtérülést, és az egész auditálható marad.</p>
             </div>
             <div className="rounded-lg border border-white/20 bg-white/10 backdrop-blur-sm p-7">
-              <Award className="text-white/80 mb-4" size={32} />
-               <h3 className="text-white text-lg font-bold mb-2 normal-case tracking-normal">Gondolkodási infrastruktúra, nem eszköztréning</h3>
-               <p className="text-white/80 text-sm">Az AI-t nem automatizációs gyorsítóként mutatjuk be, hanem olyan rendszerként, ami átalakítja a döntéshozatalt, a tudásmunkát és a szakmai együttműködést. A valódi érték nem a gyorsaságban van, hanem a jobb döntésekben és a skálázható működésben.</p>
+              <ClipboardCheck className="text-white/80 mb-4" size={32} />
+              <h3 className="text-white text-lg font-bold mb-2 normal-case tracking-normal">Kézzel fogható kimenetekkel zársz</h3>
+              <p className="text-white/80 text-sm">Nem inspirációs előadás. 90 napos akcióterv, validált use case-ek, vezetői döntés-előkészítő anyag — amit másnap használhatsz az irodádban.</p>
             </div>
           </div>
 

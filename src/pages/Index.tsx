@@ -338,7 +338,7 @@ const Index = () => {
               <p><b>Dr. Firniksz Judit</b></p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
               <p className="mt-2 text-sm leading-relaxed">
-                A governance nem arról szól, hogy mindenre nemet mondjunk, hanem arról, hogy az iroda úgy használjon AI-t, hogy közben védve legyen — jogilag, adatvédelmileg és működésileg. Ez a nap megmutatja, hogyan értelmezze egy könyvelőiroda az AI-ra vonatkozó szabályozást, hogyan kezelje az adatokat felelősen, és hogyan építsen ki olyan belső keretrendszert, ami tényleg betartható. A résztvevő megérti, miért más az AI megfelelés, mint a „hagyományos" informatikai biztonság, hogyan kapcsolódik össze a data governance, az AI governance és az információbiztonság — és hogyan kerülheti el, hogy az AI-bevezetés elakadjon a szabályozási bizonytalanságban.
+                Az AI-governance (a mesterséges intelligencia irányítása) arról szól, hogy felrajzoljuk az úthálózatot, a compliance (a megfelelés) pedig meghatározza, hogyan kell ezeken az utakon úgy közlekedni, hogy ne legyen se káosz, se baleset. Rajtunk múlik viszont, hogy jól határozzuk-e meg a célt és mennyire ügyesen tudjuk felvázolni, milyen utakat akarunk ehhez bejárni: a megengedett maximummal nyomva a gázpedált, de mégis biztonságosan. Legyünk bátrak, mert a jó AI-governance nem arról szól, hogy mindenre nemet mondjunk. Sokkal inkább arra kell fókuszálnunk, hogy az irodánk úgy használjon AI-t, hogy az illeszkedjen az üzleti modellünkhöz — ez önmagában egy védelmi vonal. Nem feledkezünk meg természetesen a kötelező jogi-szabályozási alapokról sem. Ez a nap megmutatja, hogyan értelmezzük a könyvelőiroda mindennapjaira az AI-ra vonatkozó szabályozást, hogyan kezeljük az adatokat felelősen, és hogyan építsünk ki olyan belső keretrendszert, amely tényleg betartható. Megértjük, hogy miért és miben más az AI-megfelelés, mint a „hagyományos" IT-projekteknél azt megszokhattuk, hogyan kapcsolódik össze a data governance, az AI-governance és az információbiztonság. Végső soron ez szükséges ahhoz, hogy az AI-bevezetés ne akadjon el a szabályozási bizonytalanság útvesztőjében.
               </p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett tematika</p>
               <CheckList items={[
@@ -348,7 +348,6 @@ const Index = () => {
                 `Data governance, AI governance, információbiztonság – miért nem létezhetnek egymás nélkül`,
                 `Konfekció vs. testreszabás – létezik-e egységes AI governance megoldás egy könyvelőirodának`,
                 `AI Act, GDPR és a könyvelőirodai gyakorlat – mit kell tényleg tudnod és betartanod`,
-                `A PoC purgatórium governance oldala – hogyan ne álljon le az innováció a szabályozás miatt`,
                 `Belső szabályrendszer kialakítása – a minimum, amivel biztonságosan elindulhatsz`,
               ]} />
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett óraszám</p>

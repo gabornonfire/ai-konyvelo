@@ -46,15 +46,15 @@ const Index = () => {
       </section>
 
       {/* 2. Kinek szól? */}
-      <section id="who" className="py-20 px-[5%]">
+      <section id="who" className="py-14 px-[5%]">
         <div className="max-w-content mx-auto">
           <InfoCard>
             <h2 className="text-[26px] font-semibold leading-[1.15] tracking-tight">Kinek szól?</h2>
             <p className="text-lg text-muted-foreground mt-2.5">
               Azoknak a könyvelőknek és irodatulajdonosoknak, akik érzik, hogy változás jön — és inkább az élére állnának, minthogy utolérje őket.
             </p>
-            <div className="grid grid-cols-12 gap-6 mt-4">
-              <div className="col-span-12 md:col-span-7">
+            <div className="grid grid-cols-12 gap-0 mt-4">
+              <div className="col-span-12 md:col-span-7 md:border-r md:border-border md:pr-6">
                 <CheckList items={[
                   `Könyvelőiroda-tulajdonosoknak, akik rendszert akarnak építeni`,
                   `Vezető könyvelőknek, akik időt akarnak nyerni a napi működésben`,
@@ -62,7 +62,7 @@ const Index = () => {
                   `Akik működési szinten akarnak AI-t bevezetni, nem trükköket tanulni`,
                 ]} />
               </div>
-              <div className="col-span-12 md:col-span-5">
+              <div className="col-span-12 md:col-span-5 md:pl-6 mt-6 md:mt-0">
                 <h2 className="text-[26px] font-semibold leading-[1.15] tracking-tight">Előképzettség nélkül is működik</h2>
                 <p className="text-lg text-muted-foreground mt-2.5">
                   Nem kell tech-guruvá válnod. A cél, hogy legyen egy <b>világos döntési és működési kereted</b> az AI-hoz — a saját szakmai nyelvedben.
@@ -115,7 +115,7 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="mt-10">
+          <div className="mt-10 pt-8 border-t border-white/20">
             <h3 className="text-white text-xl font-bold mb-3">Mit tanít valójában?</h3>
             <p className="text-white/80 text-lg mb-4">
               A program azt tanítja meg, hogyan lesz az AI-ból <b>rendszerszintű működési képesség</b> az irodádban — nem egyszeri trükk, hanem a mindennapi munka új alapja.
@@ -437,7 +437,7 @@ const Index = () => {
             Ha a célod nem az, hogy {`\u201EAI-t használj\u201D`}, hanem az, hogy AI-val működj — stabilan, mérhetően, megfeleléssel — akkor ez a program neked szól.
           </p>
           <div className="mt-6">
-            <a href="#" className="inline-flex items-center justify-center rounded-lg px-7 py-3.5 font-semibold text-sm bg-white text-primary hover:bg-white/90 transition-all">
+            <a href="#" className="inline-flex items-center justify-center rounded-lg px-8 py-4 font-semibold text-base bg-white text-primary hover:bg-white/90 transition-all shadow-lg">
               Érdeklődöm a képzés iránt ▸
             </a>
           </div>
@@ -445,7 +445,7 @@ const Index = () => {
       </section>
 
       {/* 7. Footer */}
-      <footer className="py-10 px-[5%] border-t border-border text-muted-foreground text-[13px]">
+      <footer className="py-8 px-[5%] border-t border-border text-muted-foreground text-[13px]">
         <div className="max-w-content mx-auto text-center">
           © 2026 Penta Unió Zrt. • Minden jog fenntartva
         </div>

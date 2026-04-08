@@ -6,7 +6,7 @@ import Note from "@/components/Note";
 import CheckList from "@/components/CheckList";
 import DayAccordion from "@/components/DayAccordion";
 import Chip from "@/components/Chip";
-import { Users, BrainCircuit, Scale, ClipboardCheck } from "lucide-react";
+import { Users, BrainCircuit, Workflow, ClipboardCheck } from "lucide-react";
 
 const Index = () => {
   const [openDays, setOpenDays] = useState<Record<number, boolean>>({});
@@ -106,14 +106,14 @@ const Index = () => {
               <p className="text-white/80 text-sm">Nem a meglévő rutinodra tanítunk rá AI-t. A képzés olyan kognitív és technológiai készségeket ad, amelyekkel új szemmel látsz rá a saját folyamataidra — és olyat is meg tudsz oldani, amit eddig el sem tudtál volna képzelni.</p>
             </div>
             <div className="rounded-lg border border-white/20 bg-white/10 backdrop-blur-sm p-7">
-              <Scale className="text-white/80 mb-4" size={32} />
-              <h3 className="text-white text-lg font-bold mb-2 normal-case tracking-normal">Jog, governance és ROI egy keretben</h3>
-              <p className="text-white/80 text-sm">Nem külön blokkok, hanem összekapcsolt rendszer. Megfelelsz az AI Act-nak, méred a megtérülést, és az egész auditálható marad.</p>
+              <Workflow className="text-white/80 mb-4" size={32} />
+              <h3 className="text-white text-lg font-bold mb-2 normal-case tracking-normal">A gondolkodástól a működő rendszerig</h3>
+              <p className="text-white/80 text-sm">Szemléletváltás, kognitív workflow, validált use case-ek, saját AI asszisztens és automatizáció — hat napon át építed fel azt a rendszert, amit utána az irodádban működtetsz.</p>
             </div>
             <div className="rounded-lg border border-white/20 bg-white/10 backdrop-blur-sm p-7">
               <ClipboardCheck className="text-white/80 mb-4" size={32} />
               <h3 className="text-white text-lg font-bold mb-2 normal-case tracking-normal">Kézzel fogható kimenetekkel zársz</h3>
-              <p className="text-white/80 text-sm">Nem inspirációs előadás. 90 napos akcióterv, validált use case-ek, vezetői döntés-előkészítő anyag — amit másnap használhatsz az irodádban.</p>
+              <p className="text-white/80 text-sm">Nem inspirációs előadás. Validált use case-ek, vezetői döntés-előkészítő anyag, governance alapváz és standard workflow minták — amit másnap használhatsz az irodádban.</p>
             </div>
           </div>
 

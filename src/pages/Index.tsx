@@ -6,7 +6,7 @@ import Note from "@/components/Note";
 import CheckList from "@/components/CheckList";
 import DayAccordion from "@/components/DayAccordion";
 import Chip from "@/components/Chip";
-import { Award, Users, Play, MessageCircleQuestion, Target, Scale } from "lucide-react";
+import { Users, BrainCircuit, Scale, ClipboardCheck } from "lucide-react";
 
 const Index = () => {
   const [openDays, setOpenDays] = useState<Record<number, boolean>>({});

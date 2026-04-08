@@ -48,21 +48,23 @@ const Index = () => {
       {/* 2. Kinek szól? */}
       <section id="who" className="py-14 px-[5%]">
         <div className="max-w-content mx-auto">
-          <InfoCard>
-            <h2 className="text-[26px] font-semibold leading-[1.15] tracking-tight">Kinek szól?</h2>
-            <p className="text-lg text-muted-foreground mt-2.5">
-              Azoknak a könyvelőknek és irodatulajdonosoknak, akik érzik, hogy változás jön — és inkább az élére állnának, minthogy utolérje őket.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-0 mt-4">
-              <div className="md:border-r md:border-border md:pr-8">
+          <h2 className="text-[26px] font-semibold leading-[1.15] tracking-tight">Kinek szól?</h2>
+          <p className="text-lg text-muted-foreground mt-2.5 mb-5">
+            Azoknak a könyvelőknek és irodatulajdonosoknak, akik érzik, hogy változás jön — és inkább az élére állnának, minthogy utolérje őket.
+          </p>
+          <div className="grid grid-cols-12 gap-6">
+            <div className="col-span-12 md:col-span-7">
+              <InfoCard className="h-full">
                 <CheckList items={[
                   `Könyvelőiroda-tulajdonosoknak, akik rendszert akarnak építeni`,
                   `Vezető könyvelőknek, akik időt akarnak nyerni a napi működésben`,
                   `Adótanácsadóknak, akik szakmai előnyt akarnak az AI-korszakban`,
                   `Akik működési szinten akarnak AI-t bevezetni, nem trükköket tanulni`,
                 ]} />
-              </div>
-              <div className="md:pl-8 mt-6 md:mt-0">
+              </InfoCard>
+            </div>
+            <div className="col-span-12 md:col-span-5">
+              <InfoCard className="h-full">
                 <h2 className="text-[26px] font-semibold leading-[1.15] tracking-tight">Előképzettség nélkül is működik</h2>
                 <p className="text-lg text-muted-foreground mt-2.5">
                   Nem kell tech-guruvá válnod. A cél, hogy legyen egy <b>világos döntési és működési kereted</b> az AI-hoz — a saját szakmai nyelvedben.
@@ -74,9 +76,9 @@ const Index = () => {
                   `Nem kell radikálisan átalakítanod az irodádat`,
                 ]} />
                 <Note><b>Ez nem tech képzés.</b> Ez működési és döntési képzés.</Note>
-              </div>
+              </InfoCard>
             </div>
-          </InfoCard>
+          </div>
         </div>
       </section>
 
@@ -115,7 +117,7 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="mt-10 pt-8 border-t border-white/20">
+          <div className="mt-8 pt-8 border-t border-white/20">
             <h3 className="text-white text-xl font-bold mb-3">Mit tanít valójában?</h3>
             <p className="text-white/80 text-lg mb-4">
               A program azt tanítja meg, hogyan lesz az AI-ból <b>rendszerszintű működési képesség</b> az irodádban — nem egyszeri trükk, hanem a mindennapi munka új alapja.

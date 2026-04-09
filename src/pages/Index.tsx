@@ -397,16 +397,19 @@ const Index = () => {
               <p><b>Koltai Balázs</b></p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Cél</p>
               <p className="mt-1 text-sm leading-relaxed">
-                Ez az utolsó alkalom összerakja az egészet. A résztvevő az elmúlt napok során felépített tudást — gondolkodásmód, workflow-k, use case-ek, eszközök, governance — most egyetlen mérhető, végrehajtható keretbe foglalja. Megtanulja, hogyan értékelje az AI-kezdeményezéseit nem csak pénzügyi, hanem működési és üzleti szempontból is: mi az, ami azonnal megtérül, mi az, ami hosszú távon hoz értéket, és mi az, amit érdemes elengedni. Megérti, mikor és hogyan érdemes egy bevált use case-t skálázni a teljes irodára, és hogyan kapcsolja össze a stratégiát, a governance-t és a változáskezelést a saját irodája adottságaival. A nap végére a résztvevő két kézzel fogható kimenettel távozik: egy vezetői szintű döntés-előkészítő összefoglalóval, ami alkalmas a támogatások megszerzésére és a belső jóváhagyásra, valamint egy konkrét 90 napos akciótervvel, ami pilot → mérés → skálázás logikában vezeti végig a következő lépéseket.
+                Ez az utolsó alkalom egységes keretbe foglalja az eddig tanultakat — egyetlen mérhető, végrehajtható működési keretté áll össze mindaz, amit a résztvevő 11 napon át felépített. Megérti, mi különbözteti meg a sikeres AI-bevezetést a tipikusan elakadó kezdeményezésektől: miért buknak el projektek a gyakorlatban, és hogyan kerülhetők el ezek tudatos döntésekkel. Megtanulja, hogyan értékelje az AI-kezdeményezéseit nem csak pénzügyi, hanem működési és üzleti szempontból is: mi hoz azonnali eredményt — idő, kapacitás, hibacsökkentés —, mi épít hosszabb távú értéket, és mit érdemes tudatosan elengedni. Megérti, mikor és hogyan érdemes egy bevált use case-t nemcsak továbbfejleszteni, hanem a teljes irodára kiterjeszteni, és hogyan kapcsolja össze a stratégiát, a governance-t és a változáskezelést a saját működésével. A nap végére a résztvevő több kézzel fogható eredménnyel távozik: pontosan tudja, mit érdemes elkezdenie a következő 1–2 hétben, rendelkezik egy strukturált 90 napos akcióterv-kerettel, képes egy vezetői szintű döntés-előkészítő összefoglalót készíteni a továbblépéshez, és tisztán látja, mely pontokon érdemes szakértői támogatást bevonni.
               </p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett tematika</p>
               <CheckList items={[
-                `ROI-keret könyvelőirodáknak – hogyan mérjük az AI hatását működési, üzleti és pénzügyi szempontból`,
-                `Mikor és hogyan skálázzunk – döntési kapuk és kontrollpontok: mikortól érdemes egy use case-t az egész irodára kiterjeszteni`,
-                `Stratégia + governance + kultúra – hogyan lesz „üzemszerű" a változás egy kisebb szervezetben`,
-                `Változáskezelés könyvelőirodai realitásban – hogyan vigyük magunkkal a kollégákat és az ügyfeleket`,
-                `Vezetői döntés-előkészítő anyag elkészítése – a támogatás megszerzése és a belső jóváhagyás eszköze`,
-                `90 napos akcióterv összeállítása – pilot → mérés → skálázás, konkrét lépésekkel és határidőkkel`,
+                `Miért buknak el az AI-kezdeményezések – tipikus hibák és elakadások a gyakorlatban`,
+                `ROI könyvelőirodai szemmel – idő, kapacitás, hibák, ügyfélélmény`,
+                `Mikor lesz egy fejlesztés skálázható – az ismételhetőség és kiterjesztés logikája`,
+                `Kockázatok és kontrollpontok – biztonságos haladás és döntési kapuk`,
+                `Stratégia + governance + kultúra – hogyan lesz „üzemszerű" a működés egy irodában`,
+                `Változáskezelés a gyakorlatban – kollégák és ügyfelek bevonása`,
+                `Vezetői döntés-előkészítő anyag – a továbblépés és a belső jóváhagyás támogatása`,
+                `90 napos akcióterv kerete – hogyan tervezd meg az irodád AI-transzformációját`,
+                `Mit érdemes MOST csinálni – konkrét lépések a következő 1–2 hétre, hogy másnap el tudj indulni`,
               ]} />
               <p className="text-xs uppercase tracking-wider text-muted-foreground font-bold mt-2.5">Tervezett óraszám</p>
               <p className="mt-1 text-sm">3×45 perc</p>
